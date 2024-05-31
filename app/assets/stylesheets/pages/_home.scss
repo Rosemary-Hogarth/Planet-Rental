@@ -1,1 +1,83 @@
-// Specific CSS for your home-page
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33.33%;
+  height: 100vh;
+}
+
+.first-column {
+  background-color: black;
+  float: left;
+}
+
+.second-column {
+  background-color: #4F89A9;
+  float: left;
+}
+
+.third-column {
+  background-color: #ddd1bd;
+  float: left;
+}
+
+ /* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// circles
+
+
+.circle1 {
+  background-color: #e46023;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  margin-top: 130px;
+}
+
+.circle2 {
+  background-color: #9FC1EE;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  margin-top: 180px;
+
+}
+
+.circle3 {
+  background-color: #DEAC3D;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  margin-top: 180px;
+
+}
+
+
+
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .first-column {
+    width: 100%;
+  }
+  .second-column, .third-column {
+      display: none;
+  }
+}
