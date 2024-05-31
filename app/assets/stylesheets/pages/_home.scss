@@ -124,16 +124,25 @@ p {
   position: relative;
 }
 
-// stars
-// .star1 {
-//   background-color: white;
-//   width: 5px;
-//   height: 5px;
-//   border-radius: 50%;
-//   margin-top: 130px;
-//   position: relative;
-// }
+/* stars */
+.star1, .star2, .star3, .star4, .star5, .star6, .star7, .star8, .star9, .star10, .star11, .star12 {
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+}
 
+.star1 { width: 30px; height: 30px; top: 140px; left: 260px; }
+.star2 { width: 35px; height: 35px; top: 500px; left: 120px; }
+.star3 { width: 25px; height: 25px; top: 470px; left: 250px; }
+.star4 { width: 10px; height: 10px; top: 500px; left: 210px; }
+.star5 { width: 8px; height: 8px; top: 515px; left: 285px; }
+.star6 { width: 9px; height: 9px; top: 435px; left: 320px; }
+.star7 { width: 25px; height: 25px; top: 300px; right: 380px; }
+.star8 { width: 30px; height: 30px; top: 150px; right: 100px; }
+.star9 { width: 8px; height: 8px; top: 150px; right: 350px; }
+.star10 { width: 8px; height: 8px; top: 190px; right: 370px; }
+.star11 { width: 8px; height: 8px; top: 140px; right: 310px; }
+.star12 { width: 8px; height: 8px; top: 120px; right: 370px; }
 
 .btn {
   padding: 8px 250px;
