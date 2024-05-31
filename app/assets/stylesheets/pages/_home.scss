@@ -22,16 +22,17 @@ p {
 
 .ad-statement-1 {
   position: absolute;
-  bottom: 80%;
-  right: -35%;
+  bottom: 100%;
+  right: -45%;
   color: white;
   font-size: 10px;
   text-align: center;
-  transform: rotate(30deg);
+  transform: rotate(50deg);
   transform-origin: left bottom;
   white-space: nowrap;
   line-height: 1;
   letter-spacing: 1.5px;
+  z-index: 2;
 }
 
 .call-to-action {
@@ -41,6 +42,7 @@ p {
   bottom: 35%;
   right: 20%;
 }
+
 
 .call-to-action p:nth-child(2) {
   margin-left: 26px;
@@ -77,6 +79,7 @@ p {
   }
 }
 
+
 .second-column {
   background-color: $color1;
   float: left;
@@ -97,34 +100,33 @@ p {
 
 // circles
 
-
 .circle1 {
   background-color: $color3;
+  margin-top: 115px;
   min-width: 280px;
   min-height: 280px;
   border-radius: 50%;
-  margin-top: 130px;
   position: relative;
 }
 
 .circle2 {
   background-color: $color4;
+  margin-top: 180px;
   min-width: 280px;
   min-height: 280px;
   border-radius: 50%;
-  margin-top: 180px;
   position: relative;
-
 }
 
 .circle3 {
   background-color: $color5;
+  margin-top: 180px;
   min-width: 280px;
   min-height: 280px;
   border-radius: 50%;
-  margin-top: 180px;
   position: relative;
 }
+
 
 /* stars */
 .star1, .star2, .star3, .star4, .star5, .star6, .star7, .star8, .star9, .star10, .star11, .star12 {
@@ -170,9 +172,39 @@ p {
       display: none;
   }
 }
-@media (max-width: 815px) {
+@media (max-width: 817px) {
 .circle1, .circle2, .circle3 {
-  min-width: 230px;
-  min-height: 230px;
+  min-width: 240px;
+  min-height: 240px;
 }
+.call-to-action {
+  font-size: 15px;
+  position: absolute;
+  top: 120px;
+  }
+.first-column h1 {
+  margin-left: 25px;
+  z-index: 2;
+}
+.ad-statement-1 {
+  bottom: 100%;
+  right: -73%;
+}
+}
+
+@media (max-width: 767px) {
+  .ad-statement-1 {
+    bottom: 115%;
+    right: -65%;
+  }
+
+  // .circle1 {
+  //   min-width: 270px;
+  //   min-height: 270px;
+  // }
+
+  .star1 {
+    top: 130px;
+    left: 290px;
+  }
 }
