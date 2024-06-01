@@ -7,3 +7,5 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+# earth = Planet.new(name: "Earth", galaxy: "Milky Way", system: "Solar", description: "Home sweet Home", price_per_night: 15)
+# earth.save
