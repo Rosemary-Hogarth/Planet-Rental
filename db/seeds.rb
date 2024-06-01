@@ -12,7 +12,7 @@ galaxy: "Milky Way",
 system: "Solar",
 body_type: "planet",
 description: "Closest to the Sun. Rocky, no atmosphere, extreme temperatures.",
-image: "/home/guillaume/code/Guillaume-Ehrhart/planet_rental/app/assets/images/Mercury.jpg",
+image: "https://images-assets.nasa.gov/image/PIA11245/PIA11245~small.jpg",
 price_per_night: 15)
 mercury.save
 venus = Planet.new(name: "Venus",
