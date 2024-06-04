@@ -63,6 +63,7 @@ p { margin: 0; }
 .btn {
   /* padding: 8px 250px; */
   width: 180px;
+  font-family: $font;
   height:60px;
   background-color: transparent;
   cursor: pointer;
@@ -145,8 +146,8 @@ svg {
   }
   .circle1 {
     margin-top: 100px;
-    min-width: 300px;
-    min-height: 300px;
+    min-width: 350px;
+    min-height: 350px;
   }
   .btn {
     /* padding: 8px 100px; */
@@ -155,6 +156,8 @@ svg {
   }
   .ad-statement-1 {
     font-size: 12px;
+    bottom: 70%;
+    right: -20%;
   }
 }
 
