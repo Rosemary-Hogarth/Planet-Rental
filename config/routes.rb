@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :planets do
-    resources :bookings, only: [:new, :create] do
+    resources :bookings, only: [:new, :create, :show] do
       member do
         patch :accept
         patch :reject

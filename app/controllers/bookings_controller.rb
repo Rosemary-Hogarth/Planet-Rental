@@ -1,18 +1,24 @@
 class BookingsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_planet, only: %i[new create accept reject]
+  before_action :set_booking, only: %i[accept reject]
 
   def new
     @booking = @planet.bookings.build
   end
 
   def create
-    @booking = @planet.bookings.build(booking_params.merge(user: current_user))
+    @booking = @planet.bookings.build(booking_params.merge(user: current_user, status: 'pending'))
     if @booking.save
-      redirect_to dashboard_path, notice: 'Booking request sent.'
+      redirect_to planet_booking_path(@planet, @booking), notice: 'Booking request sent.'
     else
       render :new
     end
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+    @planet = @booking.planet
   end
 
   def accept
@@ -44,6 +50,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:planet_id, :start_date, :end_date)
+    params.require(:booking).permit(:planet_id, :start_date, :end_date, :status)
   end
 end
