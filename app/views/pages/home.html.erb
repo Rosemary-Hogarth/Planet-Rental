@@ -1,37 +1,22 @@
 
-<div class="row">
-  <div class="column first-column">
-    <h1 class="mt-2">Planet_Rental .</h1>
-    <div class="star1"></div>
+<div class="row" data-controller="homepage">
+    <div class="column first-column" data-homepage-target="column">
+      <h1>Planet_Rental .</h1>
+      <div class="star1"></div>
       <div class="star2"></div>
-    <div class="circle1">
-    <p class="ad-statement-1">Rent a celestial body and experience something out of this world</p>
-    </div>
-  </div>
-
-  <div class="column second-column">
-    <div class="star3"></div>
-    <div class="star4"></div>
-    <div class="star5"></div>
-    <div class="star6"></div>
-    <div class="circle2">
-      <div class="call-to-action">
-        <p>Rent a planet.</p>
-        <p>Explore the universe...</p>
+      <div class="star3"></div>
+      <div class="star4"></div>
+      <div class="star5"></div>
+      <div class="circle1" data-homepage-target="circle1" data-action="mouseover->homepage#changeColor mouseout->homepage#changeColorBack">
+        <p class="ad-statement-1">Rent a celestial body and experience something out of this world</p>
       </div>
-      <a href="#" class="btn">View planets</a>
+      <button class="btn">
+        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+        </svg>
+        <span>View planets</span>
+      </button>
+      <!-- <a href="#" class="btn">View planets</a> -->
     </div>
   </div>
-
-  <div class="column third-column">
-    <div class="star7"></div>
-    <div class="star8"></div>
-    <div class="star9"></div>
-    <div class="star10"></div>
-    <div class="star11"></div>
-    <div class="star12"></div>
-    <div class="circle3">
-      <p class="ad-statement-2">Rent a celestial body and experience something out of this world</p>
-    </div>
-  </div>
-</div>
