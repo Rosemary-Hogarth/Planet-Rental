@@ -17,7 +17,7 @@
       <%= f.input :body_type, label: false, input_html: { placeholder: 'Body Type', class: 'custom-input' } %>
     </div>
     <div class="input-container">
-      <%= f.input :image, label: false, input_html: { placeholder: 'Image', class: 'custom-input' }  %>
+      <%= f.input :image, as: :file, label: false, input_html: { placeholder: 'Image', class: 'custom-input' }  %>
     </div>
     <div class="input-container">
       <%= f.input :description, label: false, input_html: { placeholder: 'Description', class: 'custom-input' }  %>
@@ -28,7 +28,7 @@
 
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'btn' %>
   </div>
   </div>
 <% end %>

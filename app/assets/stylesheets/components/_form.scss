@@ -1,11 +1,24 @@
+
+.form-container {
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+
+
+}
+
 .form-inputs {
+  font-family: "Montserrat", sans-serif;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px; /* horizontally center the form */
-  height: 70vh; /* make the form take the full height of the viewport */
+  margin-top: 40px; /* horizontally center the form */
+  height: 70vh; /*height of the viewport */
 }
 
 .input-container {
@@ -17,25 +30,25 @@ h1 {
   font-family: "Montserrat", sans-serif;
   color: white;
   margin: 0;
-  padding: 45px;
+  padding: 30px;
   letter-spacing: 1.5px;
   white-space: nowrap;
 }
 
 body {
-  background-color: black;
+  background-color: #191717;
   margin-top:0;
 }
 
 .header-circle {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-color: #e46023;
   margin-top: 0;
 }
 
-.star1, .star2, .star3, .star4, .star5, .star6 {
+.star1, .star2, .star3, .star4, .star5, .star6, .star7, .star8, .star9 {
   background-color: white;
   border-radius: 50%;
   position: absolute;
@@ -46,5 +59,32 @@ body {
 .star2 { width: 8px; height: 8px; top: 600px; left: 100px; }
 .star3 { width: 8px; height: 8px; top: 400px; left: 200px; }
 .star4 { width: 5px; height: 5px; top: 140px; left: 700px; }
-.star5 { width: 5px; height: 5px; top: 190px; left: 430px; }
-.star6 { width: 5px; height: 5px; top: 240px; left: 580px; }
+.star5 { width: 5px; height: 5px; top: 210px; left: 430px; }
+.star6 { width: 5px; height: 5px; top: 780px; left: 600px; }
+.star7 { width: 5px; height: 5px; top: 300px; left: 350px; }
+.star8 { width: 5px; height: 5px; top: 600px; left: 800px; }
+.star9 { width: 5px; height: 5px; top: 600px; left: 500px; }
+
+.btn {
+  color: grey;
+  border: 0.5px solid white;
+  font-size: 12px;
+  padding: 10px 35px;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  color: white;
+  border: 0.5px solid white;
+}
+
+
+// .back-link a {
+//   color: grey;
+//   text-decoration: none;
+//   font-family: "Montserrat", sans-serif;
+// }
+
+// .back-link a:hover {
+//   color: white;
+// }
