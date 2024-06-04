@@ -1,6 +1,7 @@
 $color1: #e46023;
-$color2: #ddd1bd;
-$color3: #DEAC3D;
+$font: 'Montserrat', sans-serif;
+
+
 
 .row {
   display: flex;
@@ -21,14 +22,9 @@ $color3: #DEAC3D;
   transition: background-color 0.5s ease;
 }
 
-.first-column {
-  background-color: black;
-  min-width: 100vw;
-  min-height: 100vh;
-}
 
 h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family:$font;
   color: white;
   margin-top: 30px;
   font-size: 40px;
@@ -40,7 +36,7 @@ p { margin: 0; }
 
 .ad-statement-1 {
   position: absolute;
-  font-family: "Montserrat", sans-serif;
+  font-family: $font;
   bottom: 90%;
   right: -50%;
   color: white;
@@ -110,7 +106,7 @@ svg {
   color: white;
   font-size: 18px;
   font-weight: 100;
-  font-family: "Montserrat", sans-serif;
+  font-family: $font;
 }
 
 .btn:hover span {
