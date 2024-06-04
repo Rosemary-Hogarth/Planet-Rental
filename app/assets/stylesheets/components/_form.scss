@@ -1,0 +1,50 @@
+.form-inputs {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px; /* horizontally center the form */
+  height: 70vh; /* make the form take the full height of the viewport */
+}
+
+.input-container {
+  margin:0;
+  width: 40%;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  margin: 0;
+  padding: 45px;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+body {
+  background-color: black;
+  margin-top:0;
+}
+
+.header-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #e46023;
+  margin-top: 0;
+}
+
+.star1, .star2, .star3, .star4, .star5, .star6 {
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+}
+
+.star1 { width: 5px; height: 5px; top: 300px; left: 260px; }
+.star2 { width: 8px; height: 8px; top: 600px; left: 100px; }
+.star3 { width: 8px; height: 8px; top: 400px; left: 200px; }
+.star4 { width: 5px; height: 5px; top: 140px; left: 700px; }
+.star5 { width: 5px; height: 5px; top: 190px; left: 430px; }
+.star6 { width: 5px; height: 5px; top: 240px; left: 580px; }
