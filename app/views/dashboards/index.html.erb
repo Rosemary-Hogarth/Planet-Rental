@@ -1,6 +1,5 @@
 <div>
   <h1>Your Bookings</h1>
-  <!--<h2>Welcome, <%= current_user.first_name %> <%= current_user.last_name %>!</h2>-->
   <% @bookings.each do |booking| %>
     <%= render "shared/booking-card", booking: booking %>
   <% end %>
