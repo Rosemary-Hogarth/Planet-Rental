@@ -1,6 +1,9 @@
 <div id="<%= dom_id planet %>">
 
-  <img src=<%= planet.image %> alt="Mercury">
+  <% if planet.image.attached? %>
+    <%= cl_image_tag planet.image.key, width: 300, height: 300, crop: :fill, alt: planet.name %>
+  <% end %>
+
   <p>
     <strong>Name:</strong>
     <%= planet.name %>
@@ -30,5 +33,6 @@
     <strong>Price per night:</strong>
     <%= planet.price_per_night %>
   </p>
+  </div>
 
 </div>
