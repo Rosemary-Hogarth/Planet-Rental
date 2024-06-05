@@ -1,0 +1,13 @@
+<div class="list-card">
+  <div class="offer-card-info flex-column align-items-center ">
+    <p><strong>Planet:</strong> <%= booking.planet.name %></p>
+    <p><strong>Guest:</strong> <%= booking.user.first_name %> <%= booking.user.last_name %></p>
+    <div>
+      <% if booking.status == "pending" %>
+        <div class="btn my-3 me-2"><%= link_to "Accept", accept_planet_booking_path(booking.planet, booking), data:{turbo_method: :patch, turbo_confirm: :"Accept this offer?"}%></div>
+        <div class="btn my-3"><%= link_to "Reject", reject_planet_booking_path(booking.planet, booking), data:{turbo_method: :patch, turbo_confirm: :"Reject this booking?"} %></div>
+      <% else %>
+        <p>Accepted</p>
+      <% end %>
+    </div>
+  </div>
