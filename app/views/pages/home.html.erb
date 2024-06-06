@@ -1,3 +1,25 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to "Planets", planets_path  %>
+<div class=" home row" data-controller="homepage">
+
+    <div class="home-column" data-homepage-target="column">
+      <h1>Planet_Rental .</h1>
+      <div class="star1"></div>
+      <div class="star2"></div>
+      <div class="star3"></div>
+      <div class="star4"></div>
+      <div class="star5"></div>
+      <div class="home-circle" data-homepage-target="circle1" data-action="mouseover->homepage#changeColor mouseout->homepage#changeColorBack">
+        <p class="ad-statement-1">Rent a celestial body, experience something out of this world</p>
+      </div>
+
+    <%= link_to planets_path do %>
+        <button class="home-button">
+          <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+          </svg>
+          <span>View planets</span>
+        </button>
+      <% end %>
+      <!-- <a href="#" class="btn">View planets</a> -->
+    </div>
+  </div>
