@@ -1,3 +1,5 @@
+// Specific CSS for your home-page
+@import "bootstrap";
 $color1: #e46023;
 $white: white;
 $black: black;
@@ -63,7 +65,7 @@ body {
 }
 
 // entire screen is black at all sizes
-.container {
+.container .main-container{
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
@@ -130,5 +132,4 @@ animation: rotate 10s linear infinite;
   .ad-statement-1 {
     font-size: 20px;
   }
-
 }
