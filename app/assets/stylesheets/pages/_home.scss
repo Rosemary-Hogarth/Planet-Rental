@@ -1,3 +1,135 @@
 // Specific CSS for your home-page
 @import "bootstrap";
-@import "components/index_custom";
+$color1: #e46023;
+$white: white;
+$black: black;
+$font: 'Montserrat', sans-serif;
+
+// Global Style
+body {
+  font-family: $font;
+}
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.home-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  transition: background-color 0.3s ease, opacity 0.5s ease;
+  background-color: $black;
+}
+
+.home-column h1 {
+  font-family:$font;
+  color: $white;
+  margin-top: 30px;
+  font-size: 40px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.home-circle p { margin: 0; }
+
+.ad-statement-1 {
+  position: absolute;
+  font-family: $font;
+  bottom: 90%;
+  right: -55%;
+  color: $white;
+  font-size: 20px;
+  text-align: center;
+  transform: rotate(25deg);
+  transform-origin: left bottom;
+  white-space: nowrap;
+  line-height: 1;
+  letter-spacing: 1.5px;
+}
+
+.home-circle {
+  background-color: $color1;
+  min-width: 350px;
+  min-height: 350px;
+  border-radius: 50%;
+  margin-top: 100px;
+  position: relative; /* Sets the position to relative, allowing absolute positioning of child elements */
+  transition: background-color 0.3s ease;/* Adds a transition effect for background-color changes, lasting 0.5 seconds */
+}
+
+// entire screen is black at all sizes
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: auto; /* Add this to enable scrolling if content overflows */
+}
+
+.star1, .star3, .star4, .star5, .star6 {
+  background-color: $white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+}
+
+.star2 {
+background-color: $white;
+border-radius: 50%;
+position: absolute;
+z-index: 2;
+animation: rotate 10s linear infinite;
+}
+
+.star1 { width: 30px; height: 30px; top: 140px; left: 260px; }
+.star2 { width: 35px; height: 35px; top: 400px; left: 50%; transform-origin: -150px; }
+.star3 { width: 10px; height: 10px; top: 200px; left: 200px; }
+.star4 { width: 10px; height: 10px; top: 140px; left: 500px; }
+
+
+
+@keyframes rotate {
+  0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@media (max-width: 767px) {
+  .home-column {
+    min-width: 100%;
+  }
+  .home-circle {
+    margin-top: 100px;
+    min-width: 350px;
+    min-height: 350px;
+  }
+  .home-button {
+    /* padding: 8px 100px; */
+    font-size: 10px;
+    top: 580px;
+  }
+  .ad-statement-1 {
+    font-size: 12px;
+    bottom: 70%;
+    right: -20%;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .home-column {
+    min-width: 100%;
+    height: auto;
+  }
+  .home-circle {
+    margin-top: 100px;
+  }
+  .ad-statement-1 {
+    font-size: 20px;
+  }
+}
