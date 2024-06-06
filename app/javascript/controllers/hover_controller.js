@@ -4,10 +4,6 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["card", "link", "name", "price"];
 
-  connect() {
-    console.log("hello")
-  }
-
   enter() {
     this.cardTarget.classList.add("hovered");
     this.cardTarget.classList.remove("custom-card")
