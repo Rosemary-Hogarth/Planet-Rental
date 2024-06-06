@@ -3,8 +3,7 @@ $white: white;
 $black: black;
 $font: 'Montserrat', sans-serif;
 
-.btn {
-  /* padding: 8px 250px; */
+.home-button {
   width: 180px;
   font-family: $font;
   height:60px;
@@ -15,7 +14,7 @@ $font: 'Montserrat', sans-serif;
   outline: none;
   border-radius: 4px;
   position: absolute;
-  top: 650px;
+  top: 620px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 13px;
@@ -37,22 +36,22 @@ svg {
   transition: 1s ease-in-out;
 }
 
-.btn:hover {
+.home-button:hover {
   transition: 1s ease-in-out;
   background: $black;
 }
 
-.btn:hover svg {
+.home-button:hover svg {
   stroke-dashoffset: -480;
 }
 
-.btn span {
+.home-button span {
   color:$white;
   font-size: 18px;
   font-weight: 100;
   font-family: $font;
 }
 
-.btn:hover span {
+.home-button:hover span {
   color: grey;
 }

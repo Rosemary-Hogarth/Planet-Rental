@@ -6,6 +6,7 @@ $font: 'Montserrat', sans-serif;
 // Global Styles
 body {
   font-family: $font;
+  // background-color: $black;
 }
 
 .row {
@@ -23,8 +24,8 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   position: relative;
-  background-color: black;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.3s ease, opacity 0.5s ease;
+  background-color: $black;
 }
 
 
@@ -37,7 +38,7 @@ h1 {
   text-align: center;
 }
 
-p { margin: 0; }
+.circle1 p { margin: 0; }
 
 .ad-statement-1 {
   position: absolute;
@@ -56,16 +57,38 @@ p { margin: 0; }
 
 .circle1 {
   background-color: $color1;
-  min-width: 400px;
-  min-height: 400px;
+  min-width: 350px;
+  min-height: 350px;
   border-radius: 50%;
   margin-top: 100px;
   position: relative; /* Sets the position to relative, allowing absolute positioning of child elements */
-  transition: background-color 0.3s ease; /* Adds a transition effect for background-color changes, lasting 0.3 seconds */
+  transition: background-color 0.3s ease;/* Adds a transition effect for background-color changes, lasting 0.5 seconds */
 }
 
+// entire screen is black at all sizes
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: auto; /* Add this to enable scrolling if content overflows */
+  }
 
+  #footer {
+    position: fixed; /* Change to fixed */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 50px;
+    background-color: #343a40; /* Set to desired dark background color */
+    color:$white;
+    }
 
+  // .navbar {
+  //   margin-bottom: 0;
+  //   height: 50px;
+  // }
 
 
 
