@@ -12,19 +12,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <%= javascript_importmap_tags %>
   </head>
-<<<<<<< HEAD
   <body class="<%= 'grey-body' if controller_name == 'planets' && action_name == 'index' %>">
     <%= render "shared/navbar" %>
     <div id="main-container">
       <p class="reset notice"><%= notice %></p>
       <p class="reset alert"><%= alert %></p>
-=======
-  <body>
-    <%= render "shared/navbar" %>
-    <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
->>>>>>> fc7d6296c7118200f729429d4d1cf919875a53a5
       <%= yield %>
     </div>
     <%= render "shared/footer" %>
