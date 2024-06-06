@@ -3,4 +3,51 @@
 @import "avatar";
 @import "form_legend_clear";
 @import "navbar";
+@import "buttons";
+@import "cards";
+@import "banners";
 @import "home_button";
+
+.grey-body {
+  background-color: #191717 ;
+}
+
+.container.index-container {
+  background-color: transparent;
+}
+
+.circle-orange {
+  width: 150px;
+  height: 150px;
+  background-color: #E76024;
+  border-radius: 50%;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+}
+
+.circle-yellow {
+  width: 150px;
+  height: 150px;
+  background-color: #DEAC3D;
+  border-radius: 50%;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+}
+
+.text.index-text {
+  margin-left: 32px;
+  margin-bottom: 25px;
+  white-space: nowrap;
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.reset {
+  all: initial;
+  * {
+    all: unset;
+  }
+}
