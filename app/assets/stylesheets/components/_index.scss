@@ -1,12 +1,12 @@
 // Import your components CSS files here.
-@import "alert";
-@import "avatar";
-@import "form_legend_clear";
-@import "navbar";
-@import "buttons";
-@import "cards";
-@import "banners";
-@import "home_button";
+@import "components/alert";
+@import "components/avatar";
+@import "components/form_legend_clear";
+@import "components/navbar";
+@import "components/buttons";
+@import "components/cards";
+@import "components/banners";
+@import "components/home_button";
 
 .grey-body {
   background-color: #191717 ;
@@ -45,7 +45,7 @@
   font-weight: 500;
 }
 
-.reset {
+#main-container .reset {
   all: initial;
   * {
     all: unset;

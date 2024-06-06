@@ -9,15 +9,15 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 16px !important;;
 }
 
 .custom-card {
-  opacity: 60%;
-  background-color: black;
-  border: 1px solid #72411b;
-  border-radius: 16px;
-  padding-top: 16px;
+  opacity: 60% !important;;
+  background-color: black !important;
+  border: 1px solid #72411b !important;
+  border-radius: 16px !important;
+  padding-top: 16px !important;
 }
 
 .card-body {
@@ -61,10 +61,10 @@
   }
 
 .hovered {
-  opacity: 100%;
-  background-color: black;
-  border: 1px solid #E76024;
-  border-radius: 16px;
+  opacity: 100% !important;
+  background-color: black !important;
+  border: 1px solid #E76024 !important;
+  border-radius: 16px !important;
   }
 
 .hidden a {

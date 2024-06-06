@@ -17,9 +17,11 @@
   </head>
   <body class="<%= 'grey-body' if controller_name == 'planets' && action_name == 'index' %>">
     <%= render "shared/navbar" %>
+    <div id="main-container">
       <p class="reset notice"><%= notice %></p>
       <p class="reset alert"><%= alert %></p>
       <%= yield %>
+    </div>
     <%= render "shared/footer" %>
   </body>
 </html>
