@@ -64,13 +64,33 @@ body {
 
 // entire screen is black at all sizes
 .container {
-  background-color: $black;
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
   flex-direction: column;
   overflow: auto; /* Add this to enable scrolling if content overflows */
 }
+
+.star1, .star3, .star4, .star5, .star6 {
+  background-color: $white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+}
+
+.star2 {
+background-color: $white;
+border-radius: 50%;
+position: absolute;
+z-index: 2;
+animation: rotate 10s linear infinite;
+}
+
+.star1 { width: 30px; height: 30px; top: 140px; left: 260px; }
+.star2 { width: 35px; height: 35px; top: 400px; left: 50%; transform-origin: -150px; }
+.star3 { width: 10px; height: 10px; top: 200px; left: 200px; }
+.star4 { width: 10px; height: 10px; top: 140px; left: 500px; }
+
 
 
 @keyframes rotate {

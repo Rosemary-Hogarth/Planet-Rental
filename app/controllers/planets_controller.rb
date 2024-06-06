@@ -26,8 +26,8 @@ class PlanetsController < ApplicationController
 
     respond_to do |format|
       if @planet.save
-        format.html { redirect_to planet_url(@planet), notice: "Planet was successfully created." }
-        format.json { render :show, status: :created, location: @planet }
+        format.html { redirect_to planets_url, notice: "Planet was successfully created." }
+        format.json { render :index, status: :created, location: @planet }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @planet.errors, status: :unprocessable_entity }
