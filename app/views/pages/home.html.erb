@@ -10,13 +10,14 @@
       <div class="circle1" data-homepage-target="circle1" data-action="mouseover->homepage#changeColor mouseout->homepage#changeColorBack">
         <p class="ad-statement-1">Rent a celestial body, experience something out of this world</p>
       </div>
-      <button class="btn">
+      <%= link_to planets_path, class: "btn" do %>
         <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
           <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
           <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
         </svg>
         <span>View planets</span>
       </button>
+      <% end %>
       <!-- <a href="#" class="btn">View planets</a> -->
     </div>
   </div>

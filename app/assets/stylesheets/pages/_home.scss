@@ -1,7 +1,12 @@
 $color1: #e46023;
+$white: white;
+$black: black;
 $font: 'Montserrat', sans-serif;
 
-
+// Global Styles
+body {
+  font-family: $font;
+}
 
 .row {
   display: flex;
@@ -25,7 +30,7 @@ $font: 'Montserrat', sans-serif;
 
 h1 {
   font-family:$font;
-  color: white;
+  color: $white;
   margin-top: 30px;
   font-size: 40px;
   letter-spacing: 1.5px;
@@ -39,7 +44,7 @@ p { margin: 0; }
   font-family: $font;
   bottom: 90%;
   right: -50%;
-  color: white;
+  color: $white;
   font-size: 20px;
   text-align: center;
   transform: rotate(25deg);
@@ -60,79 +65,8 @@ p { margin: 0; }
 }
 
 
-.btn {
-  /* padding: 8px 250px; */
-  width: 180px;
-  font-family: $font;
-  height:60px;
-  background-color: transparent;
-  cursor: pointer;
-  opacity: 0.9px;
-  border: 1px solid white;
-  outline: none;
-  border-radius: 4px;
-  position: absolute;
-  top: 650px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 13px;
-  color: white;
-  text-decoration: none;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  /* transition: background-color 0.3s ease, color 0.3s ease; */
-  transition: 1s ease-in-out;
-}
 
-svg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  fill: none;
-  stroke: #fff;
-  stroke-dasharray: 150 480;
-  stroke-dashoffset: 150;
-  transition: 1s ease-in-out;
-}
 
-.btn:hover {
-  transition: 1s ease-in-out;
-  background: black;
-}
-
-.btn:hover svg {
-  stroke-dashoffset: -480;
-}
-
-.btn span {
-  color: white;
-  font-size: 18px;
-  font-weight: 100;
-  font-family: $font;
-}
-
-.btn:hover span {
-  color: grey;
-}
-
-  .star1, .star3, .star4, .star5, .star6 {
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 2;
-  }
-
-  .star2 {
-  background-color: white;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 2;
-  animation: rotate 10s linear infinite;
-}
-
-.star1 { width: 30px; height: 30px; top: 140px; left: 260px; }
-.star2 { width: 35px; height: 35px; top: 400px; left: 50%; transform-origin: -150px; }
-.star3 { width: 10px; height: 10px; top: 200px; left: 200px; }
-.star4 { width: 10px; height: 10px; top: 140px; left: 500px; }
 
 
 @keyframes rotate {
