@@ -10,6 +10,10 @@ class PlanetsController < ApplicationController
 
   # GET /planets/1 or /planets/1.json
   def show
+    # necessary to access the booking form in the show
+    @booking = Booking.new
+    # capitalizes the planet.name header
+    @planet.name = @planet.name.upcase
   end
 
   # GET /planets/new
