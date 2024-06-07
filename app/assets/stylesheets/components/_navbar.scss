@@ -1,6 +1,10 @@
-.navbar-lewagon {
+.dropdown-menu, .dropdown-item, .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: black !important;
+
+  a {
+    color: white;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +13,16 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+#footer .nav-item {
+  color: white;
+}
+
+.nav-link, .dropdown-item, .nav-item, .navbar-brand .link {
+  color: white !important;
+
+  &:hover {
+    color: #DEAC3D !important;
+  }
 }
