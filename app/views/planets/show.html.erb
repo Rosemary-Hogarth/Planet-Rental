@@ -1,8 +1,66 @@
-<p style="color: green"><%= notice %></p>
-<%= render @planet %>
-<div>
-  <%= link_to "Edit this planet", edit_planet_path(@planet) %> |
-  <%= link_to "Back to planets", planets_path %>
-  <%= button_to "Destroy this planet", @planet, method: :delete %>
+
+<div class="page-container">
+<div class="planet-name"><%= @planet.name %></div>
+<div class="planet-details">
+  <ul>
+    <li class="listed-details">
+      <h2>Galaxy:</h2>
+      <span><%= @planet.galaxy %></span>
+    </li>
+    <li class="listed-details">
+      <h2>System:</h2>
+      <span><%= @planet.system %></span>
+    </li>
+    <li class="listed-details">
+      <h2>Description:</h2>
+      <span><%= @planet.description %></span>
+    </li>
+    <li class="listed-details">
+      <h2>Type:</h2>
+      <span><%= @planet.body_type %></span>
+    </li>
+    <li class="listed-details">
+      <h2>Price per night: €</h2>
+      <span><%= @planet.price_per_night %></span>
+    </li>
+  </ul>
 </div>
-<%= link_to "Make booking request", new_planet_booking_path(@planet) %>
+
+<div class="planet-image"><%= @planet.image %></div>
+
+<div class="booking-form-container">
+  <div class="d-flex flex-column align-items-center">
+    <p class="booking-header">Submit your booking request</p>
+    <div id="reservation-form">
+      <%= simple_form_for [@planet, @booking], url: planet_bookings_path(@planet) do |f| %>
+        <div class="d-flex justify-content-between align-items-center">
+
+          <div class="check-in-check-out">
+            <div class="input-group">
+              <%= f.input :date_in,
+                      as: :string,
+                      input_html: { data: { controller: "datepicker" } },
+                      wrapper_html: { class: 'date-input-wrapper' } %>
+              </div>
+
+              <div class="input-group">
+              <%= f.input :date_out,
+                      as: :string,
+                      input_html: { data: { controller: "datepicker" } },
+                      wrapper_html: { class: 'date-input-wrapper' } %>
+              </div>
+            </div>
+          </div>
+
+          <div class="comment">
+          <%= f.input :comment %>
+          </div>
+
+          <div class="d-flex justify-content-start">
+            <%= f.submit "Reserve", class: "booking-form-button"%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
