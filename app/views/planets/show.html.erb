@@ -24,12 +24,18 @@
         <span><%= @planet.price_per_night %></span>
       </li>
     </ul>
+    <%= link_to "Delete", planet_path(@planet), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }%>
+    <%= link_to "Edit", edit_planet_path(@planet) %>
   </div>
 
 
 
 <div class="planet-image">
-    <img src="https://images.unsplash.com/photo-1614314107768-6018061b5b72?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width: 700px; alt="jupiter">
+  <% if @planet.image.present? %>
+    <img src="<%= cl_image_path @planet.image.key %>" alt="Planet Image" style="width: 700px;">
+  <% else %>
+    <img src="https://images.unsplash.com/photo-1614314107768-6018061b5b72?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width: 700px;" alt="jupiter">
+  <% end %>
 </div>
 
 <div class="booking-form-container sticky-top">
