@@ -1,3 +1,5 @@
+// Specific CSS for your home-page
+@import "bootstrap";
 $color1: #e46023;
 $white: white;
 $black: black;
@@ -61,9 +63,7 @@ body {
   position: relative; /* Sets the position to relative, allowing absolute positioning of child elements */
   transition: background-color 0.3s ease;/* Adds a transition effect for background-color changes, lasting 0.5 seconds */
 }
-
-// entire screen is black at all sizes
-.main-container {
+.container .main-container{
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
@@ -104,5 +104,4 @@ body {
   .ad-statement-1 {
     font-size: 20px;
   }
-
 }

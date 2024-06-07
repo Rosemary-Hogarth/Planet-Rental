@@ -1,4 +1,6 @@
 class Planet < ApplicationRecord
+  belongs_to :user
+
   validates :name, presence: true
   validates :galaxy, presence: true
   validates :system, presence: true
