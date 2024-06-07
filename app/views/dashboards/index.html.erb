@@ -1,0 +1,20 @@
+<div>
+  <% if @planets.any? %>
+    <h1>Your Pending Bookings</h1>
+    <% @bookings.each do |booking| %>
+      <% if booking.status == "pending" && booking.planet.present? %>
+        <%= render "shared/booking-card", booking: booking %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <h1>Your Bookings</h1>
+  <% @bookings.each do |booking| %>
+    <% if booking.date_out > Date.today %>
+      <%= render "shared/user-booking-card", booking: booking %>
+    <% end %>
+  <% end %>
+  <h1>Your Planets</h1>
+  <% @planets.each do |planet| %>
+    <%= render "shared/planet-card", planet: planet %>
+  <% end %>
+</div>

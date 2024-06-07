@@ -1,5 +1,6 @@
 class PlanetsController < ApplicationController
-  before_action :set_planet, only: %i[ show edit update destroy ]
+  before_action :set_planet, only: %i[show edit update destroy]
+  before_action :check_owner, only: %i[edit update destroy]
   skip_before_action :authenticate_user!, only: :index
 
   # GET /planets or /planets.json
@@ -27,12 +28,14 @@ class PlanetsController < ApplicationController
   # POST /planets or /planets.json
   def create
     @planet = Planet.new(planet_params)
+    @planet.user = current_user # associate the planet with the current user
 
     respond_to do |format|
       if @planet.save
         format.html { redirect_to planets_url, notice: "Planet was successfully created." }
         format.json { render :index, status: :created, location: @planet }
       else
+        puts @planet.errors.full_messages
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @planet.errors, status: :unprocessable_entity }
       end
@@ -63,13 +66,18 @@ class PlanetsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_planet
-      @planet = Planet.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def planet_params
-      params.require(:planet).permit(:name, :galaxy, :system, :description, :body_type, :price_per_night, :image)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_planet
+    @planet = Planet.find(params[:id])
+  end
+
+  def check_owner
+    redirect_to(root_path, alert: 'Not authorized.') unless current_user == @planet.user
+  end
+
+  # Only allow a list of trusted parameters through.
+  def planet_params
+    params.require(:planet).permit(:name, :galaxy, :system, :description, :body_type, :price_per_night, :image)
+  end
 end

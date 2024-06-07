@@ -1,19 +1,31 @@
-
 <%= simple_form_for(@planet) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
+  <%= f.object.errors.full_messages.join(', ') if f.object.errors.any? %>
   <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :galaxy %>
-    <%= f.input :system %>
-    <%= f.input :body_type %>
-    <%= f.input :image %>
-    <%= f.input :description %>
-    <%= f.input :price_per_night %>
-  </div>
-
+    <div class="input-container">
+      <%= f.input :name, label: false, input_html: { placeholder: 'Planet name', class: 'custom-input' } %>
+    </div>
+    <div class="input-container">
+      <%= f.input :galaxy, label: false, input_html: { placeholder: 'Galaxy', class: 'custom-input' }  %>
+    </div>
+    <div class="input-container">
+      <%= f.input :system, label: false, input_html: { placeholder: 'System', class: 'custom-input' }  %>
+    </div>
+    <div class="input-container">
+      <%= f.input :body_type, label: false, input_html: { placeholder: 'Body Type', class: 'custom-input' } %>
+    </div>
+    <div class="input-container">
+      <%= f.input :image, as: :file, label: false, input_html: { placeholder: 'Image', class: 'custom-input' }  %>
+    </div>
+    <div class="input-container">
+      <%= f.input :description, label: false, input_html: { placeholder: 'Description', class: 'custom-input' }  %>
+    </div>
+    <div class="input-container">
+      <%= f.input :price_per_night, label: false, input_html: { placeholder: 'Price per Night', class: 'custom-input' }  %>
+    </div>
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'btn' %>
+  </div>
   </div>
 <% end %>

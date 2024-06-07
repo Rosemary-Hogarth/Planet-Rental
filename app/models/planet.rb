@@ -1,4 +1,6 @@
 class Planet < ApplicationRecord
+  belongs_to :user
+
   validates :name, presence: true
   validates :galaxy, presence: true
   validates :system, presence: true
@@ -7,4 +9,5 @@ class Planet < ApplicationRecord
   validates :price_per_night, presence: true
 
   has_many :bookings, dependent: :destroy
+  has_one_attached :image
 end
