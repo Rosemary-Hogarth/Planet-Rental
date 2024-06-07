@@ -1,8 +1,9 @@
 .page-container {
-  position: relative; /* keeps child elements in position */
+  grid-template-columns: 1fr;
+  position: relative;
   background-color: black;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  // grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
 }
 
@@ -33,7 +34,7 @@
   background-color: transparent;
   color: white;
   font-size: 20px;
-  position: relative; /* Ensure it's stacked below the image */
+  position: relative;
 }
 
 h2 small {
@@ -64,7 +65,7 @@ h2 small {
 .planet-details span {
   font-weight: 300;
   position: relative;
-  z-index: 2; /* higher z-index to place the text above the image */
+  z-index: 2;
   margin-top: 5px;
 }
 
@@ -78,15 +79,14 @@ h2 small {
 
 .booking-form-container {
   grid-column: 3;
-  background-color: #413f3f;
+  background-color: #413f3f !important;
   padding: 20px;
   margin-top: 90px;
-  margin-right: 50px;
+  margin-right: 70px;
   border-radius: 5px;
-  max-width: 300px;
-  max-height: 480px;
+  min-width: 350px;
+  max-height: 460px;
   font-size: 0.9rem;
-
 }
 
 .check-in-check-out {
@@ -128,4 +128,17 @@ h2 small {
 .booking-header {
   color: white;
   font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .page-container {
+    // change grid structure
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

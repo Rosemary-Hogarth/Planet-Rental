@@ -46,17 +46,16 @@
       <div id="reservation-form">
         <%= simple_form_for [@planet, @booking], url: planet_bookings_path(@planet) do |f| %>
           <div class="d-flex justify-content-between align-items-center">
-
-          <div class="check-in-check-out">
-            <div class="input-group">
-              <%= f.input :date_in,
+            <div class="check-in-check-out">
+              <div class="input-group">
+                <%= f.input :date_in,
                       as: :string,
                       input_html: { data: { controller: "datepicker" } },
                       wrapper_html: { class: 'date-input-wrapper' } %>
-              </div>
+                </div>
 
-              <div class="input-group">
-              <%= f.input :date_out,
+                <div class="input-group">
+                <%= f.input :date_out,
                       as: :string,
                       input_html: { data: { controller: "datepicker" } },
                       wrapper_html: { class: 'date-input-wrapper' } %>
