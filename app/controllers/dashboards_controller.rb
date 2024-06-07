@@ -6,6 +6,6 @@ class DashboardsController < ApplicationController
     @bookings = Booking.joins(:planet).where("bookings.user_id = ? OR planets.user_id = ?", current_user.id,
                                              current_user.id)
     # Fetch planets owned by current user
-    @planets = current_user.planets
+    @planets = current_user.planets.uniq
   end
 end

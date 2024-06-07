@@ -9,4 +9,8 @@
   <% @bookings.each do |booking| %>
     <%= render "shared/user-booking-card", booking: booking %>
   <% end %>
+  <h1>Your Planets</h1>
+  <% @planets.each do |planet| %>
+    <%= render "shared/planet-card", planet: planet %>
+  <% end %>
 </div>
