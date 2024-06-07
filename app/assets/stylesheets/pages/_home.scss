@@ -63,8 +63,6 @@ body {
   position: relative; /* Sets the position to relative, allowing absolute positioning of child elements */
   transition: background-color 0.3s ease;/* Adds a transition effect for background-color changes, lasting 0.5 seconds */
 }
-
-// entire screen is black at all sizes
 .container .main-container{
   min-height: 100vh;
   min-width: 100vw;
@@ -73,32 +71,6 @@ body {
   overflow: auto; /* Add this to enable scrolling if content overflows */
 }
 
-.star1, .star3, .star4, .star5, .star6 {
-  background-color: $white;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 2;
-}
-
-.star2 {
-background-color: $white;
-border-radius: 50%;
-position: absolute;
-z-index: 2;
-animation: rotate 10s linear infinite;
-}
-
-.star1 { width: 30px; height: 30px; top: 140px; left: 260px; }
-.star2 { width: 35px; height: 35px; top: 400px; left: 50%; transform-origin: -150px; }
-.star3 { width: 10px; height: 10px; top: 200px; left: 200px; }
-.star4 { width: 10px; height: 10px; top: 140px; left: 500px; }
-
-
-
-@keyframes rotate {
-  0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
-  100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
-}
 
 @media (max-width: 767px) {
   .home-column {
