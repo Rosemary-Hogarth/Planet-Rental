@@ -6,6 +6,15 @@
   gap: 10px; /* Optional: Add some space between the containers */
 }
 
+.links {
+  margin-bottom: 15px;
+}
+
+.fa-solid{
+  font-size: 150px;
+  color: white;
+}
+
 .planet-name {
   position: absolute;
   top: 20px;
@@ -25,20 +34,23 @@
   color: white;
   font-size: 20px;
   position: relative; /* Ensure it's stacked below the image */
-  z-index: 1; /* Ensure the details are above the image */
+  // z-index: 2;
 }
 
+h2 small {
+  font-size: 20px;
+}
 
 .planet-details ul {
   list-style-type: none;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   padding-right: 200px;
   margin: 0;
+  z-index: 2;
 }
 
 .planet-details .listed-details {
-
   display: flex;
   align-items: flex-start;
   text-decoration: none;
@@ -51,9 +63,10 @@
 }
 
 .planet-details span {
-  font-weight: 200;
+  font-weight: 300;
   position: relative; /* Ensure the spans are positioned */
   z-index: 2; /* Set a higher z-index to place the text above the image */
+  margin-top: 5px;
 }
 
 .planet-image {
@@ -61,7 +74,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 1;
 }
 
 .booking-form-container {
