@@ -1,103 +1,119 @@
 .page-container {
-  position: relative; // keeps child elements in position
+  position: relative; /* keeps child elements in position */
   background-color: black;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; // Adjust the fractions to control the widths of the containers
-  gap: 10px; // Optional: Add some space between the containers
+  grid-template-columns: 1fr 1fr 1fr; /* Adjust the fractions to control the widths of the containers */
+  gap: 10px; /* Optional: Add some space between the containers */
+}
 
-  .planet-name {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 50px;
-    color: white;
-  }
+.planet-name {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  color: white;
+}
 
-  .planet-details{
-    border:1px solid #e46023;
-    margin-left: 30px;
-    margin-top: 130px;
-    width: 650px;
-    background-color: black;
-    color: white;
-    font-size: 25px;
-    z-index: 1;
+.planet-details {
+  border: 1px solid #e46023;
+  margin-left: 50px;
+  margin-top: 130px;
+  margin-bottom: 100px;
+  width: 700px;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  position: relative; /* Ensure it's stacked below the image */
+  z-index: 2; /* Ensure the details are above the image */
+}
 
-    ul {
-      list-style-type: none;
-      padding: 20px;
-      margin: 0;
-    }
 
-    .listed-details {
-      margin-top: 40px;
-      display: flex;
-      align-items: flex-start;
-      text-decoration: none;
-      margin-bottom: 10px;
-    }
+.planet-details ul {
+  list-style-type: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 200px;
+  margin: 0;
+}
 
-    h2 {
-      margin-right: 10px;
-      font-weight: 400;
-    }
+.planet-details .listed-details {
+  margin-top: 40px;
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
 
-    span {
-      font-weight: 200;
-    }
-  }
+.planet-details h2 {
+  margin-right: 10px;
+  font-weight: 400;
+}
 
-  .planet-image {
-    text-align: center;
-  }
+.planet-details span {
+  font-weight: 200;
+  position: relative; /* Ensure the spans are positioned */
+  z-index: 2; /* Set a higher z-index to place the text above the image */
+}
 
-  .booking-form-container {
-    background-color: #413f3f;
-    padding: 20px;
-    margin-top: 60px;
-    border-radius: 5px;
-    max-width: 300px;
-    max-height: 480px;
-    font-size: 0.9rem;
-  }
+.planet-image {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
 
-  .check-in-check-out {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #D9D9D9;
-    padding: 7px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  .comment {
-    background-color:#D9D9D9;
-    border-radius: 5px;
-    padding: 7px;
-  }
+.booking-form-container {
+  grid-column: 3;
+  background-color: #413f3f;
+  padding: 20px;
+  margin-top: 90px;
+  margin-right: 50px;
+  border-radius: 5px;
+  max-width: 300px;
+  max-height: 480px;
+  font-size: 0.9rem;
 
-  .input-group {
-    display: flex;
-    flex-direction: column;
-    padding: 7px;
-  }
+}
 
-  .date-input-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  .booking-form-button {
-    width:100%;
-    height: 50px;
-    border-radius: 8px;
-    background-color: #e46023;
-    margin-top:10px;
-    border: none;
-  }
+.check-in-check-out {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #d9d9d9;
+  padding: 7px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
 
-  .booking-header {
-    color: white;
-    font-size: 13px;
-  }
+.comment {
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  padding: 7px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  padding: 7px;
+}
+
+.date-input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form-button {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #e46023;
+  margin-top: 20px;
+  border: none;
+}
+
+.booking-header {
+  color: white;
+  font-size: 13px;
 }

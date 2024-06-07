@@ -1,34 +1,38 @@
 
 <div class="page-container">
-<div class="planet-name"><%= @planet.name %></div>
-<div class="planet-details">
-  <ul>
-    <li class="listed-details">
-      <h2>Galaxy:</h2>
-      <span><%= @planet.galaxy %></span>
-    </li>
-    <li class="listed-details">
-      <h2>System:</h2>
-      <span><%= @planet.system %></span>
-    </li>
-    <li class="listed-details">
-      <h2>Description:</h2>
-      <span><%= @planet.description %></span>
-    </li>
-    <li class="listed-details">
-      <h2>Type:</h2>
-      <span><%= @planet.body_type %></span>
-    </li>
-    <li class="listed-details">
-      <h2>Price per night: €</h2>
-      <span><%= @planet.price_per_night %></span>
-    </li>
-  </ul>
+  <div class="planet-name"><%= @planet.name %></div>
+  <div class="planet-details">
+    <ul>
+      <li class="listed-details">
+        <h2>Galaxy:</h2>
+        <span><%= @planet.galaxy %></span>
+      </li>
+      <li class="listed-details">
+        <h2>System:</h2>
+        <span><%= @planet.system %></span>
+      </li>
+      <li class="listed-details">
+        <h2>Description:</h2>
+        <span><%= @planet.description %></span>
+      </li>
+      <li class="listed-details">
+        <h2>Type:</h2>
+        <span><%= @planet.body_type %></span>
+      </li>
+      <li class="listed-details">
+        <h2>Price per night: €</h2>
+        <span><%= @planet.price_per_night %></span>
+      </li>
+    </ul>
+  </div>
+
+
+
+<div class="planet-image">
+    <img src="https://images.unsplash.com/photo-1614314107768-6018061b5b72?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width: 700px; alt="jupiter">
 </div>
 
-<div class="planet-image"><%= @planet.image %></div>
-
-<div class="booking-form-container">
+<div class="booking-form-container sticky-top">
   <div class="d-flex flex-column align-items-center">
     <p class="booking-header">Submit your booking request</p>
     <div id="reservation-form">
@@ -60,7 +64,7 @@
             <%= f.submit "Reserve", class: "booking-form-button"%>
           </div>
         <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
