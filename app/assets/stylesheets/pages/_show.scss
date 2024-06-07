@@ -2,8 +2,8 @@
   position: relative; /* keeps child elements in position */
   background-color: black;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* Adjust the fractions to control the widths of the containers */
-  gap: 10px; /* Optional: Add some space between the containers */
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
 }
 
 .links {
@@ -34,7 +34,6 @@
   color: white;
   font-size: 20px;
   position: relative; /* Ensure it's stacked below the image */
-  // z-index: 2;
 }
 
 h2 small {
