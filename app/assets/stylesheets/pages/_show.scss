@@ -64,8 +64,8 @@ h2 small {
 
 .planet-details span {
   font-weight: 300;
-  position: relative; /* Ensure the spans are positioned */
-  z-index: 2; /* Set a higher z-index to place the text above the image */
+  position: relative;
+  z-index: 2; /* higher z-index to place the text above the image */
   margin-top: 5px;
 }
 
