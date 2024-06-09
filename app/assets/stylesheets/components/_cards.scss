@@ -1,94 +1,101 @@
 // Index Page
   // Card
-.card-img-wrapper {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-}
-
-.card-img-wrapper-hovered {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  transform: scale(1.2);
-  overflow: hidden;
-}
-
-.card-img-top {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 16px !important;
-}
-
 .custom-card {
-  opacity: 60% !important;
+  opacity: 0.6 !important;
   background-color: black !important;
   border: 1px solid #72411b !important;
   border-radius: 16px !important;
-  padding-top: 16px !important;
   overflow: hidden;
+
+  .card-img-wrapper {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+
+    .card-img-top {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px !important;
+    }
+  }
+
+  .card-body {
+    text-decoration: none;
+    font-size: 5vh;
+    padding-right: 0;
+    padding-left: 0;
+
+    .planet-name-dark {
+      font-family: "Montserrat", sans-serif;
+      color: #726A6A;
+      white-space: nowrap;
+    }
+
+    .planet-price-dark {
+      font-family: "Montserrat", sans-serif;
+      color: #726A6A;
+      font-size: 0.5em;
+      white-space: nowrap;
+    }
+
+    .hidden a {
+      text-decoration: none;
+      color: black;
+      font-size: 0.5em;
+      white-space: nowrap;
+    }
+  }
 }
 
 .hovered {
-  opacity: 100% !important;
+  opacity: 1 !important;
   background-color: black !important;
-  border: 1px solid #E76024 !important;
+  border: 1px solid #72411b !important;
   border-radius: 16px !important;
-  padding-top: 16px !important;
   overflow: hidden;
+
+  .card-img-wrapper-hovered {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    transform: scale(1.2);
+
+    .card-img-top {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px !important;
+    }
   }
+  .card-body {
+    text-decoration: none;
+    font-size: 5vh;
+    padding-right: 0;
+    padding-left: 0;
 
-.card-body {
-  text-decoration: none;
-}
+    .planet-name-bright {
+      font-family: "Montserrat", sans-serif;
+      color: white;
+      white-space: nowrap;
+    }
 
-  // CardText
+    .planet-price-bright {
+      font-family: "Montserrat", sans-serif;
+      color: white;
+      font-size: 0.5em;
+      white-space: nowrap;
+    }
 
-.planet-name-dark {
-  font-family: "Montserrat", sans-serif;
-  color: #726A6A;
-  font-size: 50px;
-}
+    .shown a {
+      text-decoration: none;
+      color: white;
+      font-size: 0.5em;
+      white-space: nowrap;
 
-.planet-price-dark {
-    font-family: "Montserrat", sans-serif;
-    color: #726A6A;
-    font-size: 25px;
+      &:hover {
+        color: #DEAC3D;
+      }
+    }
   }
-
-.planet-name-bright {
-  font-family: "Montserrat", sans-serif;
-  color: white;
-  font-size: 50px;
-}
-
-.planet-price-bright {
-  font-family: "Montserrat", sans-serif;
-  color: white;
-  font-size: 25px;
-  }
-
-.planet-name-dark {
-  font-family: "Montserrat", sans-serif;
-  color: #726A6A;
-  font-size: 50px;
-}
-
-.planet-price-dark {
-  font-family: "Montserrat", sans-serif;
-  color: #726A6A;
-  font-size: 25px;
-  }
-
-
-
-.hidden a {
-  text-decoration: none;
-  color: black;
-}
-
-.shown a {
-  text-decoration: none;
-  color: white;
 }
