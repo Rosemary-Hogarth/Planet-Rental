@@ -1,11 +1,13 @@
 <div class="list-card">
-  <div class="offer-card-info flex-column align-items-center ">
-    <div>
+  <div class="card h-100">
+    <div class="card-body d-flex flex-column">
       <p><strong>Booking ID:</strong> <%= booking.id %></p>
-      <p>Planet: <%= booking.planet.name %></p>
-      <p>Status: <%= booking.status %></p>
-      <p>Date In: <%= booking.date_in %></p>
-      <p>Date Out: <%= booking.date_out %></p>
+      <h4 class="card-title">Planet: <%= booking.planet.name %></h4>
+      <p class="card-text">
+        <strong>Status:</strong> <%= booking.status %><br>
+        <strong>Date In:</strong> <%= booking.date_in %><br>
+        <strong>Date Out:</strong> <%= booking.date_out %>
+      </p>
     </div>
   </div>
 </div>
