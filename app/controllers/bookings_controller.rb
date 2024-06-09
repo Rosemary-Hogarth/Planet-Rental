@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @booking = @planet.bookings.build(booking_params.merge(user: current_user, status: 'pending'))
     if @booking.save
       # If booking is successfull, save & redirect user to the booking's show page
-      redirect_to planet_booking_path(@planet, @booking), notice: 'Booking request sent.'
+      redirect_to dashboard_path(@planet, @booking), notice: 'Booking request sent.'
     else
       # render the new booking form again.
       render :new
