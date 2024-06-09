@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="hover"
 export default class extends Controller {
-  static targets = ["card", "link", "name", "price"];
+  static targets = ["card", "link", "name", "price", "img"];
 
   enter() {
     this.cardTarget.classList.add("hovered");
@@ -16,6 +16,9 @@ export default class extends Controller {
 
     this.priceTarget.classList.remove("planet-price-dark")
     this.priceTarget.classList.add("planet-price-bright")
+
+    this.imgTarget.classList.remove("card-img-wrapper")
+    this.imgTarget.classList.add("card-img-wrapper-hovered")
   }
 
   leave() {
@@ -30,5 +33,8 @@ export default class extends Controller {
 
     this.priceTarget.classList.remove("planet-price-bright")
     this.priceTarget.classList.add("planet-price-dark")
+
+    this.imgTarget.classList.remove("card-img-wrapper-hovered")
+    this.imgTarget.classList.add("card-img-wrapper")
   }
 }
