@@ -32,10 +32,11 @@ class PlanetsController < ApplicationController
 
     respond_to do |format|
       if @planet.save
-        format.html { redirect_to planets_url, notice: "Planet was successfully created." }
+        flash[:notice] = "Planet was successfully created."
+        format.html { redirect_to planets_url }
         format.json { render :index, status: :created, location: @planet }
       else
-        puts @planet.errors.full_messages
+        flash.now[:alert] = @planet.errors.full_messages.to_sentence
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @planet.errors, status: :unprocessable_entity }
       end
@@ -46,9 +47,11 @@ class PlanetsController < ApplicationController
   def update
     respond_to do |format|
       if @planet.update(planet_params)
-        format.html { redirect_to planet_url(@planet), notice: "Planet was successfully updated." }
+        flash[:notice] = "Planet was successfully updated."
+        format.html { redirect_to planet_url(@planet) }
         format.json { render :show, status: :ok, location: @planet }
       else
+        flash.now[:alert] = @planet.errors.full_messages.to_sentence
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @planet.errors, status: :unprocessable_entity }
       end
@@ -57,11 +60,12 @@ class PlanetsController < ApplicationController
 
   # DELETE /planets/1 or /planets/1.json
   def destroy
-    @planet.destroy!
-
-    respond_to do |format|
-      format.html { redirect_to planets_url, notice: "Planet was successfully destroyed." }
-      format.json { head :no_content }
+    if @planet.bookings.where(status: ['pending', 'accepted']).exists?
+      flash[:alert] = "Planet cannot be deleted because it has a pending or accepted booking."
+      redirect_to @planet
+    else
+      @planet.destroy
+      redirect_to planets_url, notice: "Planet was successfully destroyed."
     end
   end
 
