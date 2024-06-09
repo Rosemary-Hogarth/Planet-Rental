@@ -1,6 +1,9 @@
-<div class="container mt-3">
+<div class="container ">
+<div class="header-circle">
+  <h1>Welcome to your dashboard, <%= current_user.first_name %></h1>
+</div>
   <!-- Nav Tabs--->
-  <ul class="nav nav-tabs bg-dark text-white d-flex justify-content-center mb-1">
+  <ul id="dashboard-navbar" class="nav nav-tabs bg-dark text-white d-flex justify-content-center mt-4 mb-5">
     <!-- Pending Bookings-->
     <li class="nav-item">
       <a class="nav-link active text-white" data-bs-toggle="tab" href="#pending">Pending Bookings</a>
@@ -14,6 +17,7 @@
       <a class="nav-link text-white" data-bs-toggle="tab" href="#planets">Your Planets</a>
     </li>
   </ul>
+
   <!-- Tab Content --->
   <div class="tab-content">
     <!-- Pending -->

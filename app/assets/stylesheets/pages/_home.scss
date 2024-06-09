@@ -60,8 +60,8 @@ body {
   min-height: 350px;
   border-radius: 50%;
   margin-top: 100px;
-  position: relative; /* Sets the position to relative, allowing absolute positioning of child elements */
-  transition: background-color 0.3s ease;/* Adds a transition effect for background-color changes, lasting 0.5 seconds */
+  position: relative;
+  transition: background-color 0.3s ease;
 }
 .container .main-container{
   min-height: 100vh;
