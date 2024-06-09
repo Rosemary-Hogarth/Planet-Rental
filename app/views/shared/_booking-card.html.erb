@@ -1,13 +1,18 @@
 <div class="list-card">
-  <div class="offer-card-info flex-column align-items-center ">
-    <div>
+  <div class="card h-100">
+    <div class="card-body d-flex flex-column">
       <p><strong>Booking ID:</strong> <%= booking.id %></p>
-      <p>Planet: <%= booking.planet.name %></p>
-      <p>Status: <%= booking.status %></p>
-      <p>Date In: <%= booking.date_in %></p>
-      <p>Date Out: <%= booking.date_out %></p>
-      <div class="btn mb-3 me-2"><%= link_to "Accept", accept_planet_booking_path(booking.planet, booking), data:{turbo_method: :patch, turbo_confirm: :"Accept this offer?"}%></div>
-      <div class="btn mb-3"><%= link_to "Reject", reject_planet_booking_path(booking.planet, booking), data:{turbo_method: :patch, turbo_confirm: :"Reject this booking?"} %></div>
+      <h4 class="card-title">Planet: <%= booking.planet.name %></h4>
+      <p class="card-text">
+        <strong>Planet:</strong> <%= booking.planet.name %><br>
+        <strong>Status:</strong> <%= booking.status %><br>
+        <strong> Date In:</strong> <%= booking.date_in %><br>
+        <strong> Date Out:</strong> <%= booking.date_out %>
+      </p>
+      <div class="d-flex mt-auto">
+        <div class="btn text-bg-dark btn-spacing"><%= link_to "Accept", accept_planet_booking_path(booking.planet, booking), data:{turbo_method: :patch, turbo_confirm: :"Accept this offer?"}%></div>
+        <div class="btn text-bg-dark"><%= link_to "Reject", reject_planet_booking_path(booking.planet, booking), data:{turbo_method: :patch, turbo_confirm: :"Reject this booking?"} %></div>
+      </div>
     </div>
   </div>
 </div>
