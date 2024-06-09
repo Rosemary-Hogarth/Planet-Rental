@@ -1,13 +1,9 @@
 .page-container {
-  position: relative; /* keeps child elements in position */
+  position: relative;
   background-color: black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
-}
-
-.links {
-  margin-bottom: 15px;
 }
 
 .fa-solid{
@@ -33,7 +29,7 @@
   background-color: transparent;
   color: white;
   font-size: 20px;
-  position: relative; /* Ensure it's stacked below the image */
+  position: relative;
 }
 
 h2 small {
@@ -64,7 +60,7 @@ h2 small {
 .planet-details span {
   font-weight: 300;
   position: relative;
-  z-index: 2; /* higher z-index to place the text above the image */
+  z-index: 2;
   margin-top: 5px;
 }
 
@@ -78,15 +74,14 @@ h2 small {
 
 .booking-form-container {
   grid-column: 3;
-  background-color: #413f3f;
+  background-color: #413f3f !important;
   padding: 20px;
   margin-top: 90px;
   margin-right: 50px;
   border-radius: 5px;
-  max-width: 300px;
-  max-height: 480px;
+  min-width: 350px;
+  max-height: 460px;
   font-size: 0.9rem;
-
 }
 
 .check-in-check-out {
@@ -125,7 +120,74 @@ h2 small {
   border: none;
 }
 
+// .delete-button {
+//   width: 180px;
+//   height:60px;
+//   background-color: transparent;
+//   cursor: pointer;
+//   opacity: 0.9px;
+//   border: 1px solid white;
+//   outline: none;
+//   border-radius: 4px;
+//   position: absolute;
+//   top: 620px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   font-size: 13px;
+//   color: white;
+//   text-decoration: none;
+//   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+//   transition: 1s ease-in-out;
+// }
+
+// .delete-button:hover {
+//   background-color: darkred;
+// }
+
 .booking-header {
   color: white;
   font-size: 13px;
+}
+
+@media (max-width: 767px) {
+  .page-container {
+    // change grid structure
+    grid-template-columns: 1fr;
+  }
+  .planet-image {
+    display: none;
+  }
+  .planet-details {
+    width:80vw;
+  }
+  .booking-form-container {
+    grid-column: 1;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid #e46023;
+    background-color: black !important;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 1124px) and (min-width: 768px)  {
+  .page-container {
+    grid-template-columns: 1fr;
+  }
+  .planet-image {
+  display: none;
+  }
+  .planet-details {
+    width:80vw;
+  }
+  .booking-form-container {
+    grid-column: 1;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 1px solid #e46023;
+    background-color: black !important;
+    border-radius: 0;
+  }
 }

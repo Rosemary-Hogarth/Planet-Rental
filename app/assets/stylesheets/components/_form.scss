@@ -1,7 +1,7 @@
-.bg-dark {
+.main-container {
   background-color: #191717;
-  position: relative;
 }
+
 
 .banner {
   display: flex;
@@ -52,42 +52,50 @@
   max-width: 800px; /* optional: limit the maximum width */
   height: 600px;
   margin: 0 auto;
+
+  .form-button {
+    background-color: #191717;
+    color: white;
+    border: 1px solid white;
+    padding: 16px 64px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .form-button:hover {
+    color: grey;
+    border: 1px solid white;
+  }
+
+  .form-inputs {
+    font-family: "Montserrat", sans-serif;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* horizontally center the form */
+    height: 70vh; /* height of the viewport */
+  }
+
+  .input-container {
+    margin:0;
+    width: 40%;
+  }
 }
 
-.form-inputs {
-  font-family: "Montserrat", sans-serif;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px; /* horizontally center the form */
-  height: 70vh; /* height of the viewport */
-}
 
-.input-container {
-  margin:0;
-  width: 40%;
-}
 
-.btn {
-  color: grey;
-  border: 0.5px solid white;
-  font-size: 12px;
-  padding: 10px 35px;
-  border-radius: 10px;
-}
 
-.btn:hover {
-  color: white;
-  border: 0.5px solid white;
-}
+
+
+
 
 @media (max-width: 767px) {
   .input-container {
     width: 70%;
   }
-.btn {
+.form-button {
   margin-top: 20px;
 }
 
