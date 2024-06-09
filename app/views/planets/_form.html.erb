@@ -1,7 +1,6 @@
 <%= simple_form_for(@planet, html: { multipart: true }) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-  <%= f.object.errors.full_messages.join(', ') if f.object.errors.any? %>
   <div class="form-inputs">
     <div class="input-container">
       <%= f.input :name, label: false, input_html: { placeholder: 'Planet name', class: 'custom-input' } %>
@@ -24,8 +23,8 @@
     <div class="input-container">
       <%= f.input :price_per_night, label: false, input_html: { placeholder: 'Price per Night', class: 'custom-input' }  %>
     </div>
-  <div class="form-actions">
-    <%= f.button :submit, class: 'btn' %>
-  </div>
+    <div class="form-actions">
+      <%= f.button :submit, class: 'btn' %>
+    </div>
   </div>
 <% end %>
