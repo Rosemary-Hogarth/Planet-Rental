@@ -6,7 +6,7 @@
   border: 1px solid #72411b !important;
   border-radius: 16px !important;
   overflow: hidden;
-  transition: opacity 1s ease;
+  transition: all 1s ease;
 
   .card-img-wrapper {
     width: 100%;
@@ -56,10 +56,10 @@
 .hovered {
   opacity: 1 !important;
   background-color: black !important;
-  border: 1px solid #72411b !important;
+  border: 1px solid #e46023 !important;
   border-radius: 16px !important;
   overflow: hidden;
-  transition: opacity 1s ease;
+  transition: all 1s ease;
 
   .card-img-wrapper-hovered {
     width: 100%;

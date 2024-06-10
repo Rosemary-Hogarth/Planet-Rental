@@ -32,7 +32,7 @@
   color: white !important;
 
   &:hover {
-    color: #c27338  !important;
+    color: #DEAC3D  !important;
   }
 }
 .btn.btn-search {
@@ -41,8 +41,8 @@
   margin-right: 5px;
 
   &:hover {
-    color: #c27338  !important;
-    border: 1px solid white !important;
+    color: #DEAC3D  !important;
+    border: 1px solid #DEAC3D !important;
   }
 }
 
@@ -66,6 +66,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: background-color 0.5s ease;
 }
 
 .square-link:hover .circle-link {
