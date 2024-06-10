@@ -13,10 +13,21 @@
 @import "pages/home";
 @import "components/dashboard";
 
-#main-container .reset {
-  all: initial;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#main-container {
+  flex: 1;
+  background-color: #191717;
+
+  .reset {
+    all: initial;
   * {
     all: unset;
   }
   display: none;
+  }
 }
