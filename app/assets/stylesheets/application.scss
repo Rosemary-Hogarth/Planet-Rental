@@ -12,6 +12,8 @@
 @import "pages/index";
 @import "pages/home";
 @import "components/dashboard";
+@import "components/registration_form";
+
 
 body {
   display: flex;
@@ -31,3 +33,4 @@ body {
   display: none;
   }
 }
+
