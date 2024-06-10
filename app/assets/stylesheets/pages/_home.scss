@@ -8,6 +8,7 @@ $font: 'Montserrat', sans-serif;
 // Global Style
 body {
   font-family: $font;
+  background-color: #191717;
 }
 .home {
   display: flex;
@@ -71,10 +72,6 @@ body {
   overflow: auto; /* Add this to enable scrolling if content overflows */
 }
 
-$color1: #e46023;
-$white: white;
-$black: black;
-$font: 'Montserrat', sans-serif;
 
 .home-button {
   width: 180px;
@@ -150,6 +147,31 @@ svg {
     right: -20%;
   }
 }
+.star {
+  background-color: $white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+}
+
+.star2 {
+  background-color: $white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  animation: rotate 10s linear infinite;
+  }
+
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  }
+
+  .star1 { width: 30px; height: 30px; top: 140px; left: 260px; }
+  .star2 { width: 35px; height: 35px; top: 400px; left: 50%; transform-origin: -150px; }
+  .star3 { width: 10px; height: 10px; top: 200px; left: 200px; }
+  .star4 { width: 10px; height: 10px; top: 140px; left: 500px; }
 
 @media (max-width: 1024px) and (min-width: 768px) {
   .home-column {

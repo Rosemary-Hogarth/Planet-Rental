@@ -2,12 +2,12 @@
   background-color: #191717;
 }
 
-
 .banner {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 80%; // Adjust the width as needed
+  width: 80%;
+  margin-left: 20px;
 }
 
 .header-circle {
@@ -20,7 +20,7 @@
   h1 {
     font-family: "Montserrat", sans-serif;
     color: white;
-    margin: 0;
+    margin-top: 0;
     padding: 30px;
     letter-spacing: 1.5px;
     white-space: nowrap;

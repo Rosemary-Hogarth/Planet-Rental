@@ -1,13 +1,19 @@
 <!-- app/views/shared/_planet-card.html.erb -->
+
 <div class="list-card">
   <div class="card h-100">
     <div class="card-body d-flex flex-column">
       <p><strong>Planet ID:</strong> <%= planet.id %></p>
-      <h4 class="card-title">Planet: <%= planet.name %></h4>
-      <div class="d-flex mt-auto">
-        <div class="btn text-bg-dark btn-spacing"><%= link_to "Edit", edit_planet_path(planet) %></div>
-        <div class="btn text-bg-dark btn-spacing"><%= link_to "Delete", planet_path(planet), method: :delete, data: { confirm: "Are you sure?" } %></div>
-        <div class="btn text-bg-dark"><%= link_to "Book planet", planet_path(planet) %></div>
+      <div class="centered-content">
+        <% if planet.image.present? %>
+          <img src="<%= cl_image_path planet.image.key %>" alt="Planet Image" style="width: 200px;">
+        <% end %>
+      </div>
+      <h4 class="card-title"><%= planet.name.upcase %></h4>
+      <div class="mt-auto">
+        <div class="btn text-bg-dark btn-spacing btn-edit"><%= link_to "Edit", edit_planet_path(planet) %></div>
+        <div class="btn text-bg-dark btn-spacing btn-delete"><%= link_to "Delete", planet_path(planet), method: :delete, data: { confirm: "Are you sure?" } %></div>
+        <div class="btn text-bg-dark btn-book"><%= link_to "Book", planet_path(planet) %></div>
       </div>
     </div>
   </div>
