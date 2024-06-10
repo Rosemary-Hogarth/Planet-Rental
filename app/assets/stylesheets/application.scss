@@ -12,3 +12,10 @@
 @import "pages/index";
 @import "pages/home";
 @import "components/dashboard";
+
+#main-container .reset {
+  all: initial;
+  * {
+    all: unset;
+  }
+}
