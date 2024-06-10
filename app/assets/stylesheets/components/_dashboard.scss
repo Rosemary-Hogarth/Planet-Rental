@@ -61,6 +61,11 @@ strong {
   align-items: center;
 }
 
+#pending-container .planet-id {
+  font-size: 14px;
+  flex-wrap: nowrap ;
+}
+
 #pending-container .card-text {
   font-size: 12px;
   margin-top: 10px;
@@ -77,6 +82,8 @@ strong {
   display: flex;
   justify-content: center;
 }
+
+
 .btn.text-bg-dark {
   background-color: #191717 !important;
   color: white;
@@ -109,6 +116,9 @@ strong {
   margin-right: 12px;
 }
 
+.availability p {
+    font-size: 12px;
+}
 
 #dashboard-navbar {
   background-color: #191717 !important ;

@@ -3,28 +3,28 @@
 <div class="list-card">
   <div class="card h-100">
     <div class="card-body d-flex flex-column">
-      <p><strong>Planet ID:</strong> <%= planet.id %></p>
+    <div class="top-section d-flex justify-content-between align-items-center">
+    <p class="planet-id">Planet ID:<%= planet.id %></p>
+    <div class="availability">
+          <% if planet.bookings.where(status: ['pending', 'accepted']).exists? %>
+            <p>Planet is pending or accepted.</p>
+          <% else %>
+            <p>Planet is available.</p>
+          <% end %>
+        </div>
+        </div>
       <div class="centered-content">
         <% if planet.image.present? %>
           <img src="<%= cl_image_path planet.image.key %>" alt="Planet Image" style="width: 200px;">
         <% end %>
       </div>
-      <h4 class="card-title"><%= planet.name.upcase %></h4>
+        <h4 class="card-title"><%= planet.name.upcase %></h4>
       <div class="mt-auto">
         <div class="btn text-bg-dark btn-spacing btn-edit"><%= link_to "Edit", edit_planet_path(planet) %></div>
-        <div class="btn text-bg-dark btn-spacing btn-delete"><%= link_to "Delete", planet_path(planet), method: :delete, data: { confirm: "Are you sure?" } %></div>
+        <div class="btn text-bg-dark btn-spacing btn-delete"><%= link_to "Delete", planet_path(planet), data:{turbo_method: :destroy, turbo_confirm: "Are you sure?" } %></div>
         <div class="btn text-bg-dark btn-book"><%= link_to "Book", planet_path(planet) %></div>
-      <h4 class="card-title">Planet: <%= planet.name %></h4>
-      <% if planet.bookings.where(status: ['pending', 'accepted']).exists? %>
-        <p>Planet has a pending or accepted status.</p>
-      <% else %>
-        <p>Planet is available.</p>
-      <% end %>
-      <div class="d-flex mt-auto">
-        <div class="btn text-bg-dark btn-spacing"><%= link_to "Edit", edit_planet_path(planet) %></div>
-        <div class="btn text-bg-dark btn-spacing"><%= link_to "Delete", planet_path(planet), method: :delete, data: { confirm: "Are you sure?" } %></div>
-        <div class="btn text-bg-dark"><%= link_to "Book planet", new_planet_booking_path(planet) %></div>
-      </div>
+
     </div>
   </div>
+</div>
 </div>
