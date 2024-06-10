@@ -11,7 +11,7 @@
       <div class="d-flex mt-auto">
         <div class="btn text-bg-dark btn-spacing"><%= link_to "Edit", edit_planet_path(planet) %></div>
         <div class="btn text-bg-dark btn-spacing"><%= link_to "Delete", planet_path(planet), method: :delete, data: { confirm: "Are you sure?" } %></div>
-        <div class="btn text-bg-dark"><%= link_to "Book planet", new_planet_booking_path(planet) %></div>
+        <div class="btn text-bg-dark"><%= link_to "View planet", planet_path(planet) %></div>
       </div>
     </div>
   </div>
