@@ -32,6 +32,16 @@
   color: white !important;
 
   &:hover {
-    color: #DEAC3D !important;
+    color: #c27338  !important;
+  }
+}
+.btn.btn-search {
+  border: 1px solid white;
+  color: white !important;
+  margin-right: 5px;
+
+  &:hover {
+    color: #c27338  !important;
+    border: 1px solid white !important;
   }
 }

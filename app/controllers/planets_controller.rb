@@ -69,7 +69,7 @@ class PlanetsController < ApplicationController
       redirect_to @planet
     else
       @planet.destroy
-      redirect_to planets_url, notice: "Planet was successfully destroyed."
+      redirect_to dashboard_path, notice: "Planet was successfully destroyed."
     end
   end
 

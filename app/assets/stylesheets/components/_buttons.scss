@@ -13,4 +13,7 @@
 .btn-text-create{
   text-decoration: none;
   color: white;
+    &:hover {
+      color: grey;
+    }
 }

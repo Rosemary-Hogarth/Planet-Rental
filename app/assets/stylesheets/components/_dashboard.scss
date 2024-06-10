@@ -1,15 +1,19 @@
+@import 'components/stars';
+
 .nav-link.active {
   background-color: #343a40 !important;
-  /* dark gray */
-  color: #ffc107 !important;
-  /* bs-yellow */
+  color: #c27338 !important;
 }
+
 
 a {
   color: white;
   text-decoration: none;
 }
 
+.container .header-circle {
+  margin-top: 30px;
+}
 
 .btn-spacing {
   margin-right: 16px;
@@ -18,4 +22,104 @@ a {
 
 strong {
   font-weight: 480;
+}
+
+#main-container {
+  background-color: #191717;
+}
+
+#pending-container .list-card {
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+#pending-container .card-body {
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #72411b !important;
+}
+
+#pending-container .card {
+  border-radius: 8px;
+  border: 1px solid #72411b !important;
+  overflow: hidden;
+}
+
+#pending-container .dash-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#pending-container .centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#pending-container .planet-id {
+  font-size: 14px;
+  flex-wrap: nowrap ;
+}
+
+#pending-container .card-text {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;;
+}
+
+#pending-container .card-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+#pending-container .card-body .mt-auto {
+  display: flex;
+  justify-content: center;
+}
+
+
+.btn.text-bg-dark {
+  background-color: #191717 !important;
+  color: white;
+  border: 1px solid rgba(231, 96, 36, 0.5);
+  border-radius: 10px;
+}
+
+#pending-container .btn-accept a {
+    color: #4F8AA9;
+    text-decoration: none;
+}
+
+#pending-container .btn-reject a {
+  color: #e46023;
+}
+
+#pending-container .btn-edit a {
+  color: #4F8AA9;
+}
+
+#pending-container .btn-delete a {
+  color: #e46023;
+}
+
+#pending-container .btn-book a {
+  color:#DEAC3D;
+}
+
+.btn-spacing {
+  margin-right: 12px;
+}
+
+.availability p {
+    font-size: 12px;
+}
+
+#dashboard-navbar {
+  background-color: #191717 !important ;
 }

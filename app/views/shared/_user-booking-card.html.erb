@@ -2,7 +2,14 @@
   <div class="card h-100">
     <div class="card-body d-flex flex-column">
       <p><strong>Booking ID:</strong> <%= booking.id %></p>
-      <h4 class="card-title">Planet: <%= booking.planet.name %></h4>
+      <div class="centered-content">
+            <% if planet.image.present? %>
+              <img class="dash-image" src="<%= cl_image_path planet.image.key %>" alt="Planet Image" style="width: 200px;">
+            <% else %>
+              <i class="header-circle"></i>
+            <% end %>
+          </div>
+      <h4 class="card-title"><%= booking.planet.name.upcase %></h4>
       <p class="card-text">
         <strong>Status:</strong> <%= booking.status %><br>
         <strong>Date In:</strong> <%= booking.date_in %><br>
