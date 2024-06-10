@@ -1,4 +1,4 @@
-// Specific CSS for your home-page
+
 @import "bootstrap";
 $color1: #e46023;
 $white: white;
@@ -126,27 +126,6 @@ svg {
 }
 
 
-
-@media (max-width: 767px) {
-  .home-column {
-    min-width: 100%;
-  }
-  .home-circle {
-    margin-top: 100px;
-    min-width: 350px;
-    min-height: 350px;
-  }
-  .home-button {
-    /* padding: 8px 100px; */
-    font-size: 10px;
-    top: 580px;
-  }
-  .ad-statement-1 {
-    font-size: 12px;
-    bottom: 70%;
-    right: -20%;
-  }
-}
 .star {
   background-color: $white;
   border-radius: 50%;
@@ -172,6 +151,27 @@ svg {
   .star2 { width: 35px; height: 35px; top: 400px; left: 50%; transform-origin: -150px; }
   .star3 { width: 10px; height: 10px; top: 200px; left: 200px; }
   .star4 { width: 10px; height: 10px; top: 140px; left: 500px; }
+
+  @media (max-width: 767px) {
+    .home-column {
+      min-width: 100%;
+    }
+    .home-circle {
+      margin-top: 100px;
+      min-width: 350px;
+      min-height: 350px;
+    }
+    .home-button {
+      /* padding: 8px 100px; */
+      font-size: 10px;
+      top: 580px;
+    }
+    .ad-statement-1 {
+      font-size: 12px;
+      bottom: 70%;
+      right: -20%;
+    }
+  }
 
 @media (max-width: 1024px) and (min-width: 768px) {
   .home-column {

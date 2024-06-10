@@ -1,29 +1,52 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
-    <%= f.input :first_name, required: true %>
-    <%= f.input :last_name, required: true %>
-    <%= f.input :password,
-                hint: "leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
-                required: true,
-                input_html: { autocomplete: "current-password" } %>
+<h2 class="heading-edit">Edit <%= resource_name.to_s.humanize %></h2>
+<div class="form-container">
+<div class="star-container">
+      <div class="star star1-reg"></div>
+      <div class="star star2-reg"></div>
+      <div class="star star3-reg"></div>
+      <div class="star star4-reg"></div>
+      <div class="star star5-reg"></div>
+      <div class="star star6-reg"></div>
+      <div class="star star7-reg"></div>
+      <div class="star star8-reg"></div>
+      <div class="star star9-reg"></div>
   </div>
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
-<h3>Cancel my account</h3>
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
-<%= link_to "Back", :back %>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs">
+      <div class="input-container">
+        <%= f.input :email, required: true, autofocus: true, input_html: { class: 'custom-input' } %>
+      </div>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+      <% end %>
+      <div class="input-container">
+        <%= f.input :first_name, required: true, input_html: { class: 'custom-input' } %>
+      </div>
+      <div class="input-container">
+        <%= f.input :last_name, required: true, input_html: { class: 'custom-input' } %>
+      </div>
+      <div class="input-container">
+        <%= f.input :password,
+                    hint: "leave it blank if you don't want to change it",
+                    required: false,
+                    input_html: { autocomplete: "new-password", class: 'custom-input' } %>
+      </div>
+      <div class="input-container">
+        <%= f.input :password_confirmation,
+                    required: false,
+                    input_html: { autocomplete: "new-password", class: 'custom-input' } %>
+      </div>
+      <div class="input-container">
+        <%= f.input :current_password,
+                    hint: "we need your current password to confirm your changes",
+                    required: true,
+                    input_html: { autocomplete: "current-password", class: 'custom-input' } %>
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, "Update", class: 'update-form-button' %>
+    </div>
+  <% end %>
+</div>
+  <div class="heading-edit"><p>Unhappy? </p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: 'cancel-button' %></div>
