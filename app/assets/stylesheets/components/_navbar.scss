@@ -70,4 +70,5 @@
 
 .square-link:hover .circle-link {
   background-color: white;
+  transition: background-color 0.5s ease;
 }
