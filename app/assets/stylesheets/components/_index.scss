@@ -9,11 +9,6 @@
 @import "components/form";
 @import "components/stars";
 
-
-.grey-body {
-  background-color: #191717 ;
-}
-
 .container.index-container {
   background-color: transparent;
 }
@@ -21,11 +16,12 @@
 .circle-orange {
   width: 150px;
   height: 150px;
-  background-color: #E76024;
+  background-color: #e46023;
   border-radius: 50%;
   overflow: visible;
   display: flex;
   align-items: center;
+  transition: background-color 1s ease;
 }
 
 .circle-yellow {
@@ -36,6 +32,7 @@
   overflow: visible;
   display: flex;
   align-items: center;
+  transition: background-color 1s ease;
 }
 
 .text.index-text {
@@ -45,11 +42,4 @@
   font-family: "Montserrat", sans-serif;
   font-size: 50px;
   font-weight: 500;
-}
-
-#main-container .reset {
-  all: initial;
-  * {
-    all: unset;
-  }
 }
