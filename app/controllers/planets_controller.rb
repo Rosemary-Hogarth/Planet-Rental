@@ -5,7 +5,11 @@ class PlanetsController < ApplicationController
 
   # GET /planets or /planets.json
   def index
-    @planets = Planet.all
+    if params[:query].present?
+      @planets = Planet.search_by_name_galaxy_system_and_description(params[:query])
+    else
+      @planets = Planet.all
+    end
   end
 
   # GET /planets/1 or /planets/1.json

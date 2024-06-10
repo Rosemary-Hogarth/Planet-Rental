@@ -1,4 +1,11 @@
 class Planet < ApplicationRecord
+  include PgSearch::Model
+  pg_search_scope :search_by_name_galaxy_system_and_description,
+                  against: %i[name galaxy system body_type description],
+                  using: {
+                    tsearch: { prefix: true }
+                  }
+
   belongs_to :user
 
   validates :name, presence: true
