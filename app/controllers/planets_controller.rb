@@ -86,6 +86,6 @@ class PlanetsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def planet_params
-    params.require(:planet).permit(:name, :galaxy, :system, :description, :body_type, :price_per_night, :image)
+    params.require(:planet).permit(:name, :galaxy, :system, :description, :price_per_night, :image)
   end
 end
