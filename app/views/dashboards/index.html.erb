@@ -1,6 +1,9 @@
-<div class="container mt-3">
+<div class="container">
+  <div class="header-circle">
+    <h1>Welcome to your dashboard, <%= current_user.first_name %></h1>
+  </div>
   <!-- Nav Tabs--->
-  <ul class="nav nav-tabs bg-dark text-white d-flex justify-content-center mb-1">
+  <ul id="dashboard-navbar" class="nav nav-tabs bg-dark text-white d-flex justify-content-center mt-4 mb-5">
     <!-- Pending Bookings-->
     <li class="nav-item">
       <a class="nav-link active text-white" data-bs-toggle="tab" href="#pending">Pending Bookings</a>
@@ -14,40 +17,57 @@
       <a class="nav-link text-white" data-bs-toggle="tab" href="#planets">Your Planets</a>
     </li>
   </ul>
+  <div class="star-container">
+    <div class="star new-star1"></div>
+    <div class="star new-star2"></div>
+    <div class="star new-star3"></div>
+    <div class="star new-star4"></div>
+    <div class="star new-star5"></div>
+    <div class="star new-star6"></div>
+    <div class="star new-star7"></div>
+    <div class="star new-star8"></div>
+    <div class="star new-star9"></div>
+  </div>
   <!-- Tab Content --->
   <div class="tab-content">
     <!-- Pending -->
     <div class="tab-pane fade show active" id="pending">
-      <div class="row">
-        <% @bookings.each do |booking| %>
-          <% if booking.status == "pending" && booking.planet.present? %>
-            <div class="col-sm-4 p-3">
-              <%= render "shared/booking-card", booking: booking %>
-            </div>
-          <% end %>
-        <% end %>
+      <div id="pending-container">
+        <div class="row">
+          <% @bookings.each do |booking| %>
+            <% if booking.status == "pending" && booking.planet.present? %>
+              <div class="col-sm-4 p-3">
+                <%= render "shared/booking-card", booking: booking, planet: booking.planet %>
+              </div>
+            <% end %>
+            <% end %>
+          </div>
+        </div>
       </div>
-    </div>
-    <!-- Current -->
-    <div class="tab-pane fade" id="current">
-      <div class="row">
-        <% @bookings.each do |booking| %>
-          <% if booking.date_out.present? && booking.date_out > Date.today %>
-            <div class="col-sm-4 p-3">
-              <%= render "shared/user-booking-card", booking: booking %>
-            </div>
+      <!-- Current -->
+      <div class="tab-pane fade" id="current">
+        <div id="pending-container">
+        <div class="row">
+          <% @bookings.each do |booking| %>
+            <% if booking.date_out && booking.date_out > Date.today %>
+              <div class="col-sm-4 p-3">
+                <%= render "shared/user-booking-card", booking: booking, planet: booking.planet %>
+              </div>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
     </div>
     <!-- Planets -->
     <div class="tab-pane fade" id="planets">
+      <div id="pending-container">
       <div class="row">
         <% @planets.each do |planet| %>
-          <div class="col-sm-6 p-3">
+          <div class="col-sm-4 p-3">
             <%= render "shared/planet-card", planet: planet %>
           </div>
         <% end %>
+      </div>
       </div>
     </div>
   </div>

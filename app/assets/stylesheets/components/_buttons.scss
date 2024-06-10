@@ -8,9 +8,12 @@
   margin-bottom: 16px;
   margin-right: 32px;
   cursor: pointer;
-}
-
-.btn-text-create{
   text-decoration: none;
-  color: white;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: #DEAC3D;
+    border-color: #DEAC3D;
+    transition: all 0.5s ease;
+  }
 }

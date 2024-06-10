@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <%# <p class="link"><strong>Planet</strong></p> %>
+    <%= link_to root_path, class: "navbar-brand square-link" do %>
+      <div class="circle-link"></div>
     <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -11,7 +11,7 @@
       <div class="ms-auto flex">
         <%= form_with url: planets_path, method: :get, class: "d-flex my-2 my-lg-0" do %>
           <%= text_field_tag :query, params[:query], class: "form-control me-2", placeholder: "Search" %>
-          <%= submit_tag "Search", name: "", class: "btn btn-outline-success my-2 my-sm-0" %>
+          <%= submit_tag "Search", name: "", class: "btn btn-search my-2 my-sm-0" %>
         <% end %>
       </div>
       <!--end form -->

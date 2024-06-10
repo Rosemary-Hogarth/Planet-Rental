@@ -69,7 +69,7 @@ class PlanetsController < ApplicationController
       redirect_to @planet
     else
       @planet.destroy
-      redirect_to planets_url, notice: "Planet was successfully destroyed."
+      redirect_to dashboard_path, notice: "Planet was successfully destroyed."
     end
   end
 
@@ -86,6 +86,6 @@ class PlanetsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def planet_params
-    params.require(:planet).permit(:name, :galaxy, :system, :description, :body_type, :price_per_night, :image)
+    params.require(:planet).permit(:name, :galaxy, :system, :description, :price_per_night, :image)
   end
 end

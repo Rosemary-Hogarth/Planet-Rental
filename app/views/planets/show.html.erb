@@ -15,10 +15,6 @@
         <span><%= @planet.description %></span>
       </li>
       <li class="listed-details">
-        <h2>Type:</h2>
-        <span><%= @planet.body_type %></span>
-      </li>
-      <li class="listed-details">
         <h2>Price per night <small>($)</small>: </h2>
         <span><%= @planet.price_per_night %></span>
       </li>
@@ -29,7 +25,7 @@
   </div>
   <div class="planet-image">
     <% if @planet.image.present? %>
-      <img src="<%= cl_image_path @planet.image.key %>" alt="Planet Image" style="width: 600px;">
+      <img src="<%= cl_image_path @planet.image.key %>" alt="Planet Image" style="width: 500px;">
     <% else %>
       <i class="fa-solid fa-circle"></i>
     <% end %>
