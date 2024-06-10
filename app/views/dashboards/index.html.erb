@@ -32,7 +32,7 @@
     <div class="tab-pane fade" id="current">
       <div class="row">
         <% @bookings.each do |booking| %>
-          <% if booking.date_out > Date.today %>
+          <% if booking.date_out.present? && booking.date_out > Date.today %>
             <div class="col-sm-4 p-3">
               <%= render "shared/user-booking-card", booking: booking %>
             </div>
