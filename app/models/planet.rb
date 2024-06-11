@@ -1,7 +1,7 @@
 class Planet < ApplicationRecord
   include PgSearch::Model
   pg_search_scope :search_by_name_galaxy_system_and_description,
-                  against: %i[name galaxy system body_type description],
+                  against: %i[name galaxy system description],
                   using: {
                     tsearch: { prefix: true }
                   }
