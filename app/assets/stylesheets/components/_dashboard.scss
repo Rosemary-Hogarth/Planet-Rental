@@ -27,6 +27,8 @@ strong {
   background-color: #191717;
 }
 
+
+
 #pending-container .list-card {
   border-radius: 8px;
   margin-top: 20px;
@@ -36,8 +38,7 @@ strong {
   background-color: black;
   color: white;
   border-radius: 8px;
-  display: flex;
-  flex-direction: column;
+  flex: 1; /* Ensures content takes full height */
   border: 1px solid #72411b !important;
 }
 
@@ -107,7 +108,7 @@ strong {
   color: #e46023;
 }
 
-#pending-container .btn-book a {
+#pending-container .btn-view a {
   color:#DEAC3D;
 }
 
