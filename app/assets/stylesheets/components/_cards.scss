@@ -56,7 +56,7 @@
 .hovered {
   opacity: 1 !important;
   background-color: black !important;
-  border: 1px solid #e46023 !important;
+  border: 1px solid #c27338 !important;
   border-radius: 16px !important;
   overflow: hidden;
   transition: all 1s ease;
@@ -104,7 +104,7 @@
       transition: color 1s ease;
 
       &:hover {
-        color: #DEAC3D;
+        color: #c27338;
       }
     }
   }
