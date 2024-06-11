@@ -10,10 +10,6 @@
   gap: 10px;
 }
 
-.fa-solid{
-  font-size: 150px;
-  color: white;
-}
 
 .planet-name {
   position: absolute;
@@ -82,6 +78,7 @@ h2 small {
 .delete-button a:hover {
   color:#e46023;
 }
+
 .planet-image {
   position: absolute;
   top: 50%;
@@ -146,7 +143,6 @@ h2 small {
 @media (max-width: 760px) {
   .page-container {
     position: relative;
-    // change grid structure
     grid-template-columns: 1fr;
   }
 
@@ -156,7 +152,6 @@ h2 small {
     z-index: 2;
     position: absolute;
   }
-
 
   .booking-form-container, .planet-details {
     grid-column: 1;
@@ -184,9 +179,11 @@ h2 small {
   .planet-details h2 {
     font-size: 20px;
   }
+
   .planet-details ul {
     padding-right: 30px;
   }
+
   .planet-details .delete-button {
     width:75px;
   }
