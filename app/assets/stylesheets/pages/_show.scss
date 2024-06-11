@@ -10,10 +10,6 @@
   gap: 10px;
 }
 
-.fa-solid{
-  font-size: 150px;
-  color: white;
-}
 
 .planet-name {
   position: absolute;
@@ -82,6 +78,7 @@ h2 small {
 .delete-button a:hover {
   color:#e46023;
 }
+
 .planet-image {
   position: absolute;
   top: 50%;
@@ -143,45 +140,102 @@ h2 small {
   font-size: 13px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 760px) {
   .page-container {
-    // change grid structure
+    position: relative;
     grid-template-columns: 1fr;
   }
+
   .planet-image {
-    display: none;
+    width: 10px;
+    height: 10px;
+    z-index: 2;
+    position: absolute;
   }
-  .planet-details {
-    width:80vw;
-  }
-  .booking-form-container {
+
+  .booking-form-container, .planet-details {
     grid-column: 1;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 auto;
     border: 1px solid #e46023;
-    background-color: black !important;
+    background-color: transparent !important;
     border-radius: 0;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+  }
+
+  .booking-form-container {
+    z-index: 1;
+  }
+
+  .planet-details {
+    font-size: 15px;
+    width: 60%;
+    margin: 130px auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .planet-details h2 {
+    font-size: 20px;
+  }
+
+  .planet-details ul {
+    padding-right: 30px;
+  }
+
+  .planet-details .delete-button {
+    width:75px;
   }
 }
 
 @media (max-width: 1124px) and (min-width: 768px)  {
   .page-container {
+    position: relative;
+    background-color: black;
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 10px;
   }
+
   .planet-image {
-  display: none;
+    width: 10px;
+    height: 10px;
+    z-index: 2;
+    position: absolute;
   }
-  .planet-details {
-    width:80vw;
-  }
-  .booking-form-container {
+
+  .booking-form-container, .planet-details {
     grid-column: 1;
-    margin-top: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0 auto;
     border: 1px solid #e46023;
-    background-color: black !important;
+    background-color: transparent !important;
     border-radius: 0;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+  }
+
+  .booking-form-container {
+    z-index: 1;
+  }
+
+  .planet-details {
+    font-size: 20px;
+    width: 60%;
+    margin:130px auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .planet-details h2 {
+    font-size: 25px;
+  }
+  .planet-details ul {
+    padding-right: 30px;
+  }
+
+  .planet-details {
+    margin-bottom: 40px;
   }
 }
