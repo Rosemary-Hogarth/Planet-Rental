@@ -20,7 +20,9 @@
       </li>
     </ul>
     <% if @planet.user == current_user %>
+    <div class="delete-button">
       <%= link_to "Delete", planet_path(@planet), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }%>
+      </div>
     <% end %>
   </div>
   <div class="planet-image">

@@ -1,4 +1,16 @@
-<h2>Sign up</h2>
+<h2 class="heading-edit mt-2">Sign up</h2>
+<div class="reg-form-container">
+<div class="star-container">
+      <div class="star star1-reg"></div>
+      <div class="star star2-reg"></div>
+      <div class="star star3-reg"></div>
+      <div class="star star4-reg"></div>
+      <div class="star star5-reg"></div>
+      <div class="star star6-reg"></div>
+      <div class="star star7-reg"></div>
+      <div class="star star8-reg"></div>
+      <div class="star star9-reg"></div>
+  </div>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
   <div class="form-inputs">
@@ -17,7 +29,8 @@
                 input_html: { autocomplete: "new-password" } %>
   </div>
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", class: "login-button" %>
   </div>
 <% end %>
 <%= render "devise/shared/links" %>
+</div>
