@@ -44,33 +44,34 @@
 .star8-reg { width: 5px; height: 5px; top: 670px; left: 1300px; }
 .star9-reg { width: 5px; height: 5px; top: 730px; left: 60px; }
 
-.form-container {
+.reg-form-container {
   background-color: black;
   border: 1px solid white;
   border-radius: 10px;
-  max-width: 800px;
+  max-width: 900px;
   height: auto;
   margin: 0 auto;
   padding: 20px;
 }
 
-.form-container label {
+.reg-form-container label {
   color: white;
 }
 
-.form-actions .update-form-button {
+.reg-form-actions .update-form-button {
   background-color: #191717;
   color: white;
   border: 1px solid white;
-  padding: 16px 64px;
+  padding: 10px 50px;
   border-radius: 8px;
   transition: background-color 0.3s ease;
-  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-.form-actions {
+.reg-form-actions {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .update-form-button:hover {
@@ -78,20 +79,21 @@
   border: 1px solid white;
 }
 
-.form-inputs {
+.reg-form-container .reg-form-inputs {
   font-family: "Montserrat", sans-serif;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px; /* horizontally center the form */
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 
-.input-container {
+.reg-input-container {
   margin: 0;
   width: 40%;
-  margin-bottom: 10px;
+
 }
 
 
@@ -116,12 +118,24 @@
   margin-bottom: 10px;
 }
 
+.login-button {
+  color: white;
+  border: 1px solid white;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  &:hover {
+    color: grey;
+    border: 1px solid white;
+  }
+}
+
+
 @media (max-width: 767px) {
   .form-inputs .input-container {
     width: 80%;
   }
 
-  .form-container .form-inputs {
+  .reg-form-container .form-inputs {
     margin-top: 30px;
   }
 
@@ -131,7 +145,7 @@
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
-  .form-inputs .input-container {
+  .reg-form-inputs .input-container {
     width: 50%;
   }
 }

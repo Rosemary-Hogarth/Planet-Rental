@@ -4,9 +4,7 @@
       <p><strong>Booking ID:</strong> <%= booking.id %></p>
       <div class="centered-content">
         <% if planet.image.present? %>
-          <img class="dash-image" src="<%= cl_image_path planet.image.key %>" alt="Planet Image" style="width: 200px;">
-        <% else %>
-          <i class="header-circle"></i>
+          <img class="dash-image" src="<%= cl_image_path planet.image.key %>" alt="Planet Image" style="width: 187px; height:108px;">
         <% end %>
       </div>
       <h4 class="card-title"><%= booking.planet.name.upcase %></h4>
