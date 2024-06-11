@@ -1,4 +1,3 @@
-
 <div class="page-container">
   <div class="planet-name"><%= @planet.name %></div>
   <div class="planet-details">
@@ -20,10 +19,10 @@
         <span><%= @planet.price_per_night %></span>
       </li>
     </ul>
+    <% if @planet.user == current_user %>
+      <%= link_to "Delete", planet_path(@planet), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }%>
+    <% end %>
   </div>
-
-
-
   <div class="planet-image">
     <% if @planet.image.present? %>
       <img src="<%= cl_image_path @planet.image.key %>" alt="Planet Image" style="width: 500px;">
@@ -31,7 +30,6 @@
       <i class="fa-solid fa-circle"></i>
     <% end %>
   </div>
-
   <div class="booking-form-container sticky-top">
     <div class="d-flex flex-column align-items-center">
       <p class="booking-header">Submit your booking request</p>
@@ -44,9 +42,8 @@
                       as: :string,
                       input_html: { data: { controller: "datepicker" } },
                       wrapper_html: { class: 'date-input-wrapper' } %>
-                </div>
-
-                <div class="input-group">
+              </div>
+              <div class="input-group">
                 <%= f.input :date_out,
                       as: :string,
                       input_html: { data: { controller: "datepicker" } },
@@ -54,16 +51,14 @@
               </div>
             </div>
           </div>
-
           <div class="comment">
             <%= f.input :comment %>
           </div>
-
           <div class="d-flex justify-content-start">
             <%= f.submit "Reserve", class: "booking-form-button"%>
           </div>
-          <% end %>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>
+</div>
