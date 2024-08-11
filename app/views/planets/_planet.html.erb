@@ -1,11 +1,12 @@
 <div id="<%= dom_id planet %>" class="col-xl-3 col-lg-4 col-sm-6 mb-4" data-controller="hover">
   <div class="card custom-card h-100 d-flex flex-column" data-action="mouseenter->hover#enter mouseleave->hover#leave mouseenter->hover-circle#enter mouseleave->hover-circle#leave" data-hover-target="card">
     <div class="card-img-wrapper" data-hover-target="img">
-      <% if planet.image.present? %>
-      <img src="<%= cl_image_path planet.image.key %>" alt="<%= planet.name %>" class="card-img-top">
-      <% else %>
-      <img src="https://images.unsplash.com/photo-1589225529399-8705282f98e2?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  style="width: 200px;" alt="planet">
-      <% end %>
+     <% if planet.image.present? %>
+  <img src="<%= cl_image_path(planet.image.key) %>" alt="<%= planet.name %>" class="card-img-top">
+<% else %>
+  <img src="https://images.unsplash.com/photo-1589225529399-8705282f98e2?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width: 200px;" alt="planet">
+<% end %>
+
     </div>
     <div class="card-body text-center flex-grow-1">
       <p class="planet-name-dark" data-hover-target="name"><strong><%= planet.name.upcase %></strong></p>
