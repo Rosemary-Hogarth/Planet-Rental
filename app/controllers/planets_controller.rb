@@ -1,6 +1,5 @@
 class PlanetsController < ApplicationController
   before_action :set_planet, only: %i[show edit update destroy]
-  before_action :check_owner, only: %i[edit update destroy]
   skip_before_action :authenticate_user!, only: :index
 
   # GET /planets or /planets.json
@@ -64,12 +63,11 @@ class PlanetsController < ApplicationController
 
   # DELETE /planets/1 or /planets/1.json
   def destroy
-    if @planet.bookings.where(status: ['pending', 'accepted']).exists?
-      flash[:alert] = "Planet cannot be deleted because it has a pending or accepted booking."
-      redirect_to @planet
+    if @planet.destroy
+      redirect_to planets_path
     else
-      @planet.destroy
-      redirect_to dashboard_path, notice: "Planet was successfully destroyed."
+      Rails.logger.error "Failed to destroy planet: #{@planet.errors.full_messages}"
+      redirect_to planets_path, notice: "There was an error deleting the planet: #{@planet.errors.full_messages.join(', ')}"
     end
   end
 
@@ -80,9 +78,6 @@ class PlanetsController < ApplicationController
     @planet = Planet.find(params[:id])
   end
 
-  def check_owner
-    redirect_to(root_path, alert: 'Not authorized.') unless current_user == @planet.user
-  end
 
   # Only allow a list of trusted parameters through.
   def planet_params

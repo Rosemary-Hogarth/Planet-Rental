@@ -11,6 +11,7 @@
       <p class="planet-name-dark" data-hover-target="name"><strong><%= planet.name.upcase %></strong></p>
       <p class="planet-price-dark" data-hover-target="price"><strong><%= planet.price_per_night %> $</strong></p>
       <p class="hidden" data-hover-target="link"><%= link_to "Show this planet", planet %></p>
+        <%= link_to "", planet_path(planet), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "card-remove-link" %>
     </div>
   </div>
 </div>
