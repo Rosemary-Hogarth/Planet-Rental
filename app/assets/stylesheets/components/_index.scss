@@ -43,3 +43,10 @@
   font-size: 50px;
   font-weight: 500;
 }
+
+@media(max-width: 578px) {
+  .text.index-text {
+    font-size: 35px;
+  }
+
+}

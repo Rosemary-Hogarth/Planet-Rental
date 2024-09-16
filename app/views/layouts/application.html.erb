@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>PlanetRental</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
@@ -14,7 +14,7 @@
   </head>
   <body>
     <%= render "shared/navbar" %>
-    <div id="main-container" class="<%= 'black-body' if controller_name == 'planets' && action_name == 'show' %>">
+    <div id="wrapper" class="<%= 'black-body' if controller_name == 'planets' && action_name == 'show' %>">
       <p class="notice d-none"><%= notice %></p>
       <p class="alert d-none"><%= alert %></p>
       <%= yield %>
