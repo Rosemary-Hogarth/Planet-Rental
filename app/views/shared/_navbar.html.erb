@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon custom-navbar">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand square-link" do %>
        <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/The_Blue_Marble_%28remastered%29.jpg/1920px-The_Blue_Marble_%28remastered%29.jpg", class: "earth" %>
@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- form -->
       <div class="ms-auto flex">
-        <%= form_with url: planets_path, method: :get, class: "d-flex my-2 my-lg-0" do %>
+        <%= form_with url: planets_path, method: :get, class: "d-flex mt-4 my-lg-0" do %>
           <%= text_field_tag :query, params[:query], class: "form-control me-2", placeholder: "Search" %>
           <%= submit_tag "Search", name: "", class: "btn btn-search my-2 my-sm-0" %>
         <% end %>

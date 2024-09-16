@@ -15,15 +15,15 @@
 @import "components/registration_form";
 
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+// body {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// }
+#wrapper {
+  overflow-x: hidden;
+  width: 100%;
 
-#main-container {
-  flex: 1;
-  background-color: #191717;
 
   .reset {
     all: initial;
@@ -33,4 +33,3 @@ body {
   display: none;
   }
 }
-

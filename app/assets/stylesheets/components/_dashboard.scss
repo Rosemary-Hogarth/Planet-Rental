@@ -123,3 +123,9 @@ strong {
 #dashboard-navbar {
   background-color: #191717 !important ;
 }
+
+@media (max-width: 587px) {
+  .header-circle h1 {
+    font-size: 15px;
+  }
+}
